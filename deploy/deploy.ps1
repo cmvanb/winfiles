@@ -23,3 +23,6 @@ Write-Output "Deploying windows profile from ``$base_dir`` to ``$HOME``..."
 
 # Powershell
 . "$base_dir\deploy\modules\powershell.ps1"
+
+# VSCode
+. "$base_dir\deploy\modules\vscode.ps1"
