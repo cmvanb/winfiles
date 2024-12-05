@@ -1,0 +1,42 @@
+#-------------------------------------------------------------------------------
+# Alacritty configuration file
+#-------------------------------------------------------------------------------
+
+# Environment
+#-------------------------------------------------------------------------------
+
+[env]
+COLORTERM = 'truecolor'
+
+# Appearance
+#-------------------------------------------------------------------------------
+
+[bell]
+animation = 'Linear'
+color = '#0b0b0e'
+duration = 100
+
+[cursor.style]
+blinking = 'Off'
+shape = 'Block'
+
+[font]
+size = 12
+
+[font.normal]
+family = 'IosevkaTerm Nerd Font'
+style = 'Regular'
+
+[window]
+opacity = 1.0
+
+[window.padding]
+x = 0
+y = 0
+
+# Shell
+#-------------------------------------------------------------------------------
+
+[terminal.shell]
+program = "powershell"
+args = ["-nologo"]

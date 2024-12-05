@@ -18,6 +18,9 @@ Write-Output "Deploying windows profile from ``$base_dir`` to ``$HOME``..."
 
 # Configuration files
 
+# Alacritty
+. "$base_dir\deploy\modules\alacritty.ps1"
+
 # Git
 . "$base_dir\deploy\modules\git.ps1"
 
