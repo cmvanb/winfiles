@@ -1,0 +1,16 @@
+[user]
+	name = Casper van Beuzekom
+	email = Casper.vanBeuzekom@kvernelandgroup.com
+[core]
+	editor = nvim
+	pager = less -R
+	autocrlf = true
+[log]
+	abbrevCommit = true
+	date = format:%Y-%m-%d %H:%M
+[pretty]
+	history = %C(yellow)[%h]%C(reset) %<(16,trunc)%ad %C(cyan)%an%C(reset) %C(green)%s%C(reset)
+[credential "helperselector"]
+	selected = manager
+[credential "https://kvmech.kverneland.com"]
+	provider = generic
