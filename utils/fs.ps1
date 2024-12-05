@@ -12,7 +12,7 @@ function ensure_directory($path) {
     }
 }
 
-function safe_copy($source, $destination) {
+function force_copy($source, $destination) {
     ensure_directory (Split-Path -Path $destination)
-    Copy-Item -Path $source -Destination $destination
+    Copy-Item -Force -Path $source -Destination $destination
 }
