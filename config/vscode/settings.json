@@ -1,5 +1,6 @@
 {
     "explorer.confirmDelete": false,
     "editor.cursorBlinking": "solid",
-    "workbench.editor.empty.hint": "hidden"
+    "workbench.editor.empty.hint": "hidden",
+    "vim.useSystemClipboard": false
 }
