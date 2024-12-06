@@ -14,6 +14,9 @@ Set-Alias -Force -Option AllScope -Name gc -Value git_commit
 function git_commit_amend { git commit --amend }
 Set-Alias -Force -Option AllScope -Name gca -Value git_commit_amend
 
+function git_checkout { git checkout $args }
+Set-Alias -Force -Option AllScope -Name gco -Value git_checkout
+
 function git_diff { git diff }
 Set-Alias -Force -Option AllScope -Name gd -Value git_diff
 
