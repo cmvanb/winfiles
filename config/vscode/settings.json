@@ -2,5 +2,15 @@
     "explorer.confirmDelete": false,
     "editor.cursorBlinking": "solid",
     "workbench.editor.empty.hint": "hidden",
-    "vim.useSystemClipboard": false
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<C-j>"],
+            "after": ["<C-d>"]
+        },
+        {
+            "before": ["<C-k>"],
+            "after": ["<C-u>"]
+        },
+    ],
+    "vim.useSystemClipboard": false,
 }
