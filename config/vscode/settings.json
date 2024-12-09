@@ -11,6 +11,32 @@
             "before": ["<C-k>"],
             "after": ["<C-u>"]
         },
+        {
+            "before": ["H"],
+            "commands": [
+                "editor.action.outdentLines"
+            ]
+        },
+        {
+            "before": ["L"],
+            "commands": [
+                "editor.action.indentLines"
+            ]
+        },
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": ["H"],
+            "commands": [
+                "editor.action.outdentLines"
+            ]
+        },
+        {
+            "before": ["L"],
+            "commands": [
+                "editor.action.indentLines"
+            ]
+        },
     ],
     "vim.useSystemClipboard": false,
 }
