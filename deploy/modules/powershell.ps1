@@ -9,4 +9,7 @@ $base_dir = Resolve-Path -Path "$PSScriptRoot/../.."
 . "$base_dir/utils/fs.ps1"
 
 # Deploy
-force_copy -source "$base_dir/config/powershell/Profile.ps1" -destination "$HOME/Documents/WindowsPowershell/Microsoft.PowerShell_profile.ps1"
+# NOTE: PS5
+force_copy -source "$base_dir/config/powershell/Profile.ps1" -destination "$HOME/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1"
+# NOTE: PS7
+# force_copy -source "$base_dir/config/powershell/Profile.ps1" -destination "$HOME/Documents/PowerShell/Microsoft.PowerShell_profile.ps1"
