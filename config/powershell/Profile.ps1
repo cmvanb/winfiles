@@ -73,6 +73,18 @@ Set-Alias -Force -Option AllScope -Name gsu -Value git_status_untracked
 function enable_virtual_env { .\venv\Scripts\Activate.ps1 }
 Set-Alias -Force -Option AllScope -Name va -Value enable_virtual_env
 
+function list { eza -l }
+Set-Alias -Force -Option AllScope -Name ls -Value list
+
+function list_all { eza -al }
+Set-Alias -Force -Option AllScope -Name lsa -Value list_all
+
+function list_tree { eza -lT }
+Set-Alias -Force -Option AllScope -Name lst -Value list_tree
+
+function list_tree_all { eza -alT }
+Set-Alias -Force -Option AllScope -Name lsta -Value list_tree_all
+
 Set-Alias -Force -Option AllScope -Name type -Value Get-Command
 
 # Hooks
