@@ -70,6 +70,9 @@ Set-Alias -Force -Option AllScope -Name gs -Value git_status
 function git_status_untracked { git status -u }
 Set-Alias -Force -Option AllScope -Name gsu -Value git_status_untracked
 
+function enable_virtual_env { .\venv\Scripts\Activate.ps1 }
+Set-Alias -Force -Option AllScope -Name va -Value enable_virtual_env
+
 Set-Alias -Force -Option AllScope -Name type -Value Get-Command
 
 # Hooks
