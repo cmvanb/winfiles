@@ -1,7 +1,36 @@
 # Environment variables
+[System.Environment]::SetEnvironmentVariable('XDG_CACHE_HOME', $env:USERPROFILE + '\.cache', 'User')
+[System.Environment]::SetEnvironmentVariable('XDG_DATA_HOME', $env:USERPROFILE + '\.local\share', 'User')
+[System.Environment]::SetEnvironmentVariable('XDG_CONFIG_HOME', $env:USERPROFILE + '\.config', 'User')
 [System.Environment]::SetEnvironmentVariable('PYTHONPYCACHEPREFIX', $env:USERPROFILE + '\.cache\python', 'User')
 
+# XDG directories
+# NOTE: Doesn't work on powershell 5.
+# if(-not(Test-Path $env:XDG_CACHE_HOME)){
+# 	mkdir $env:XDG_CACHE_HOME
+# }
+# if(-not(Test-Path $env:XDG_DATA_HOME)){
+# 	mkdir $env:XDG_DATA_HOME
+# }
+# if(-not(Test-Path $env:XDG_CONFIG_HOME)){
+# 	mkdir $env:XDG_DATA_HOME
+# }
+
+# Functions
+function Set-Title() {
+    $repo = git rev-parse --show-toplevel 2>$null
+    if ($LASTEXITCODE -eq 0) {
+        $repo = Split-Path -Leaf $repo
+    } else {
+        $repo = Split-Path -Leaf (Get-Location)
+    }
+    $host.UI.RawUI.WindowTitle = $repo
+}
+
 # Aliases
+function cd_set_title { Set-Location -Path "$args"; Set-Title }
+Set-Alias -Force -Option AllScope -Name cd -Value cd_set_title
+
 function git_add_all { git add -A }
 Set-Alias -Force -Option AllScope -Name gaa -Value git_add_all
 
@@ -42,3 +71,10 @@ function git_status_untracked { git status -u }
 Set-Alias -Force -Option AllScope -Name gsu -Value git_status_untracked
 
 Set-Alias -Force -Option AllScope -Name type -Value Get-Command
+
+# Hooks
+# NOTE: Doesn't work on powershell 5.
+# Invoke-Expression "$(direnv hook pwsh)"
+
+# Startup
+Set-Title
