@@ -5,6 +5,7 @@
         80,
         100,
     ],
+    "terminal.integrated.defaultProfile.windows": "Windows PowerShell",
     "terminal.external.windowsExec": "C:\\Users\\gr_cbe\\scoop\\shims\\alacritty.exe",
     "workbench.editor.empty.hint": "hidden",
     "vim.normalModeKeyBindingsNonRecursive": [
