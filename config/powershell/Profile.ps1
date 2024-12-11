@@ -31,6 +31,9 @@ function Set-Title() {
 function cd_set_title { Set-Location -Path "$args"; Set-Title }
 Set-Alias -Force -Option AllScope -Name cd -Value cd_set_title
 
+function git_add { git add $args }
+Set-Alias -Force -Option AllScope -Name ga -Value git_add
+
 function git_add_all { git add -A }
 Set-Alias -Force -Option AllScope -Name gaa -Value git_add_all
 
@@ -55,10 +58,10 @@ Set-Alias -Force -Option AllScope -Name gds -Value git_diff_staged
 function git_log { git log --pretty=history }
 Set-Alias -Force -Option AllScope -Name gl -Value git_log
 
-function git_push { git push }
+function git_push { git push $args }
 Set-Alias -Force -Option AllScope -Name gp -Value git_push
 
-function git_push_force { git push --force }
+function git_push_force { git push --force $args }
 Set-Alias -Force -Option AllScope -Name gpf -Value git_push_force
 
 function git_remote { git remote -v }
