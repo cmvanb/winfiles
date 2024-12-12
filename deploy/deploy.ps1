@@ -29,3 +29,6 @@ Write-Output "Deploying windows profile from ``$base_dir`` to ``$HOME``..."
 
 # VSCode
 . "$base_dir\deploy\modules\vscode.ps1"
+
+# Windows Terminal
+. "$base_dir\deploy\modules\windows-terminal.ps1"
