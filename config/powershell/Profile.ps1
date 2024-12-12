@@ -73,9 +73,6 @@ Set-Alias -Force -Option AllScope -Name gs -Value git_status
 function git_status_untracked { git status -u }
 Set-Alias -Force -Option AllScope -Name gsu -Value git_status_untracked
 
-function enable_virtual_env { .\venv\Scripts\Activate.ps1 }
-Set-Alias -Force -Option AllScope -Name va -Value enable_virtual_env
-
 function list { eza -l }
 Set-Alias -Force -Option AllScope -Name ls -Value list
 
@@ -88,7 +85,13 @@ Set-Alias -Force -Option AllScope -Name lst -Value list_tree
 function list_tree_all { eza -alT }
 Set-Alias -Force -Option AllScope -Name lsta -Value list_tree_all
 
+function path { Write-Output ($env:Path).Split(';') }
+Set-Alias -Force -Option AllScope -Name p -Value path
+
 Set-Alias -Force -Option AllScope -Name type -Value Get-Command
+
+function virtual_env_enable { .\venv\Scripts\Activate.ps1 }
+Set-Alias -Force -Option AllScope -Name va -Value virtual_env_enable
 
 # Hooks
 # NOTE: Doesn't work on powershell 5.
