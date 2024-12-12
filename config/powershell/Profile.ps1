@@ -6,15 +6,15 @@
 
 # XDG directories
 # NOTE: Doesn't work on powershell 5.
-# if(-not(Test-Path $env:XDG_CACHE_HOME)){
-# 	mkdir $env:XDG_CACHE_HOME
-# }
-# if(-not(Test-Path $env:XDG_DATA_HOME)){
-# 	mkdir $env:XDG_DATA_HOME
-# }
-# if(-not(Test-Path $env:XDG_CONFIG_HOME)){
-# 	mkdir $env:XDG_DATA_HOME
-# }
+if(-not(Test-Path $env:XDG_CACHE_HOME)){
+	mkdir $env:XDG_CACHE_HOME
+}
+if(-not(Test-Path $env:XDG_DATA_HOME)){
+	mkdir $env:XDG_DATA_HOME
+}
+if(-not(Test-Path $env:XDG_CONFIG_HOME)){
+	mkdir $env:XDG_DATA_HOME
+}
 
 # Functions
 function Set-Title() {
