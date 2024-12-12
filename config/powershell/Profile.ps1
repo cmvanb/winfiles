@@ -64,6 +64,9 @@ Set-Alias -Force -Option AllScope -Name gp -Value git_push
 function git_push_force { git push --force $args }
 Set-Alias -Force -Option AllScope -Name gpf -Value git_push_force
 
+function git_rebase { git rebase $args }
+Set-Alias -Force -Option AllScope -Name grb -Value git_rebase
+
 function git_remote { git remote -v }
 Set-Alias -Force -Option AllScope -Name gr -Value git_remote
 
