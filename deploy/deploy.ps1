@@ -24,6 +24,9 @@ Write-Output "Deploying windows profile from ``$base_dir`` to ``$HOME``..."
 # Git
 . "$base_dir\deploy\modules\git.ps1"
 
+# Neovim
+. "$base_dir\deploy\modules\nvim.ps1"
+
 # Powershell
 . "$base_dir\deploy\modules\powershell.ps1"
 
