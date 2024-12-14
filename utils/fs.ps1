@@ -13,6 +13,20 @@ function ensure_directory($path) {
 }
 
 function force_copy($source, $destination) {
-    ensure_directory (Split-Path -Path $destination)
-    Copy-Item -Force -Path $source -Destination $destination
+    # Remove pre-existing.
+    if (Test-Path -Path $destination) {
+        Remove-Item -Force -Recurse -Path $destination
+        Write-Output "Removed pre-existing ``$destination``."
+    }
+
+    # Ensure parent directory exists.
+    ensure_directory (Split-Path -Parent -Path $destination)
+
+    if (Test-Path -Path $source -PathType Container) {
+        Copy-Item -Force -Recurse -Path $source -Destination $destination
+        Write-Output "Copied directory ``$source`` to ``$destination``."
+    } elseif (Test-Path -Path $source -PathType Leaf) {
+        Copy-Item -Force -Path $source -Destination $destination
+        Write-Output "Copied file ``$source`` to ``$destination``."
+    }
 }
