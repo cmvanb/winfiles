@@ -10,7 +10,7 @@ function make_link($target, $link) {
     New-Item -Path $link -ItemType SymbolicLink -Value $target -ErrorVariable linkFailed
 
     if (-not ($linkFailed)) {
-        Write-Output "link: ``$source`` -> ``$destination``"
+        print "link: ``$source`` -> ``$destination``"
     }
 }
 
@@ -25,18 +25,9 @@ function force_delete($path) {
         Remove-Item -Force -Recurse -Path $path -ErrorVariable removeFailed
 
         if (-not ($removeFailed)) {
-            Write-Output "delete: ``$path``"
+            print "delete: ``$path``"
         }
     }
-}
-
-function is_admin() {
-    [bool](([System.Security.Principal.WindowsIdentity]::GetCurrent()).groups -match "S-1-5-32-544")
-}
-
-function is_developer() {
-    Get-WindowsDeveloperLicense -ErrorVariable developerLicenseFailed -ErrorAction SilentlyContinue
-    return (-not ($developerLicenseFailed))
 }
 
 function force_copy($source, $destination) {
@@ -53,7 +44,7 @@ function force_copy($source, $destination) {
     }
 
     if (-not ($copyFailed)) {
-        Write-Output "copy: ``$source`` -> ``$destination``"
+        print "copy: ``$source`` -> ``$destination``"
     }
 }
 
@@ -64,11 +55,11 @@ function link_or_copy($source, $destination) {
 
     ensure_directory (Split-Path -Parent -Path $destination)
 
-    if (is_admin -or is_developer) {
-        make_link $source $destination
-    } else {
+    # if ((is_admin) -or (is_developer)) {
+    #     make_link $source $destination
+    # } else {
         force_copy $source $destination
-    }
+    # }
 }
 
 Export-ModuleMember -Function *
