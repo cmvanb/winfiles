@@ -9,6 +9,6 @@ $base_dir = Resolve-Path -Path "$PSScriptRoot\..\.."
 . "$base_dir\utils\fs.ps1"
 
 # Deploy
-force_copy `
+install `
     -source "$base_dir\config\windows-terminal\settings.json" `
     -destination "$env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json"

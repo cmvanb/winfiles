@@ -9,4 +9,4 @@ $base_dir = Resolve-Path -Path "$PSScriptRoot\..\.."
 . "$base_dir\utils\fs.ps1"
 
 # Deploy
-force_copy -source "$base_dir\config\nvim\" -destination "$HOME\.config\nvim\"
+install -source "$base_dir\config\nvim\" -destination "$HOME\.config\nvim\"
