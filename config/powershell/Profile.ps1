@@ -31,6 +31,10 @@ function Set-Title() {
 function cd_set_title { Set-Location -Path "$args"; Set-Title }
 Set-Alias -Force -Option AllScope -Name cd -Value cd_set_title
 
+function clear_screen { Clear-Host }
+Set-Alias -Force -Option AllScope -Name cls -Value clear_screen
+Set-Alias -Force -Option AllScope -Name clear -Value clear_screen
+
 function git_add { git add $args }
 Set-Alias -Force -Option AllScope -Name ga -Value git_add
 

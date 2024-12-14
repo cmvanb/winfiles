@@ -9,6 +9,6 @@ $base_dir = Resolve-Path -Path "$PSScriptRoot\..\.."
 . "$base_dir\utils\fs.ps1"
 
 # Deploy
-force_copy `
+install `
     -source "$base_dir\config\alacritty\alacritty.toml" `
     -destination "$env:APPDATA\alacritty\alacritty.toml"

@@ -9,4 +9,4 @@ $base_dir = Resolve-Path -Path "$PSScriptRoot/../.."
 . "$base_dir/utils/fs.ps1"
 
 # Deploy
-force_copy -source "$base_dir/config/git/.gitconfig" -destination "$HOME/.gitconfig"
+install -source "$base_dir/config/git/.gitconfig" -destination "$HOME/.gitconfig"
