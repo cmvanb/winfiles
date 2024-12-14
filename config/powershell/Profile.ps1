@@ -91,6 +91,9 @@ Set-Alias -Force -Option AllScope -Name lsta -Value list_tree_all
 function path { Write-Output ($env:Path).Split(';') }
 Set-Alias -Force -Option AllScope -Name p -Value path
 
+function touch_file { New-Item -ItemType File -Path $args }
+Set-Alias -Force -Option AllScope -Name touch -Value touch_file
+
 Set-Alias -Force -Option AllScope -Name type -Value Get-Command
 
 function virtual_env_enable { .\venv\Scripts\Activate.ps1 }
