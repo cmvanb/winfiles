@@ -6,32 +6,29 @@
 #-------------------------------------------------------------------------------
 
 # Script directory
-$base_dir = Resolve-Path -Path "$PSScriptRoot/.."
+$base_dir = Resolve-Path -Path "$PSScriptRoot\.."
 
 # Environment variables needed by deployment modules
-$env:XDG_CONFIG_HOME = "$HOME\.config"
+$env:XDG_CONFIG_HOME = "$env:USERPROFILE\.config"
+
+# Import deployment modules
+Import-Module "$base_dir.\deploy\modules\alacritty" -Prefix alacritty_
+Import-Module "$base_dir.\deploy\modules\git" -Prefix git_
+Import-Module "$base_dir.\deploy\modules\nvim" -Prefix nvim_
+Import-Module "$base_dir.\deploy\modules\powershell" -Prefix ps_
+Import-Module "$base_dir.\deploy\modules\vscode" -Prefix vscode_
+Import-Module "$base_dir.\deploy\modules\windows-terminal" -Prefix wt_
 
 # Deploy profile
 #-------------------------------------------------------------------------------
 
-Write-Output "Deploying windows profile from ``$base_dir`` to ``$HOME``..."
+Write-Output "Deploying windows profile from ``$base_dir`` to ``$env:USERPROFILE``..."
 
-# Configuration files
+alacritty_deploy
+git_deploy
+nvim_deploy
+ps_deploy
+vscode_deploy
+wt_deploy
 
-# Alacritty
-. "$base_dir\deploy\modules\alacritty.ps1"
-
-# Git
-. "$base_dir\deploy\modules\git.ps1"
-
-# Neovim
-. "$base_dir\deploy\modules\nvim.ps1"
-
-# Powershell
-. "$base_dir\deploy\modules\powershell.ps1"
-
-# VSCode
-. "$base_dir\deploy\modules\vscode.ps1"
-
-# Windows Terminal
-. "$base_dir\deploy\modules\windows-terminal.ps1"
+Write-Output "Deployment complete."
