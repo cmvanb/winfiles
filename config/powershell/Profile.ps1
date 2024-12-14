@@ -37,7 +37,7 @@ Set-Alias -Force -Option AllScope -Name ga -Value git_add
 function git_add_all { git add -A }
 Set-Alias -Force -Option AllScope -Name gaa -Value git_add_all
 
-function git_branch { git branch -v }
+function git_branch { git branch -v $args }
 Set-Alias -Force -Option AllScope -Name gb -Value git_branch
 
 function git_commit { git commit -m $args }
@@ -67,7 +67,7 @@ Set-Alias -Force -Option AllScope -Name gpf -Value git_push_force
 function git_rebase { git rebase $args }
 Set-Alias -Force -Option AllScope -Name grb -Value git_rebase
 
-function git_remote { git remote -v }
+function git_remote { git remote -v $args }
 Set-Alias -Force -Option AllScope -Name gr -Value git_remote
 
 function git_status { git status }
@@ -76,16 +76,16 @@ Set-Alias -Force -Option AllScope -Name gs -Value git_status
 function git_status_untracked { git status -u }
 Set-Alias -Force -Option AllScope -Name gsu -Value git_status_untracked
 
-function list { eza -l }
+function list { eza -l $args }
 Set-Alias -Force -Option AllScope -Name ls -Value list
 
-function list_all { eza -al }
+function list_all { eza -al $args }
 Set-Alias -Force -Option AllScope -Name lsa -Value list_all
 
-function list_tree { eza -lT }
+function list_tree { eza -lT $args }
 Set-Alias -Force -Option AllScope -Name lst -Value list_tree
 
-function list_tree_all { eza -alT }
+function list_tree_all { eza -alT $args }
 Set-Alias -Force -Option AllScope -Name lsta -Value list_tree_all
 
 function path { Write-Output ($env:Path).Split(';') }
