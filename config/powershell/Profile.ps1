@@ -1,3 +1,15 @@
+#-------------------------------------------------------------------------------
+# PowerShell profile
+# NOTE: Shared between powershell and pwsh.
+#-------------------------------------------------------------------------------
+
+# Bootstrapping
+#-------------------------------------------------------------------------------
+
+# Imports
+Import-Module -Force "utils\fs"
+Import-Module -Force "utils\system"
+
 # Environment variables
 [System.Environment]::SetEnvironmentVariable('XDG_CACHE_HOME', $env:USERPROFILE + '\.cache', 'User')
 [System.Environment]::SetEnvironmentVariable('XDG_DATA_HOME', $env:USERPROFILE + '\.local\share', 'User')
@@ -5,7 +17,6 @@
 [System.Environment]::SetEnvironmentVariable('PYTHONPYCACHEPREFIX', $env:USERPROFILE + '\.cache\python', 'User')
 
 # XDG directories
-# NOTE: Doesn't work on powershell 5.
 if(-not(Test-Path $env:XDG_CACHE_HOME)){
 	mkdir $env:XDG_CACHE_HOME
 }
@@ -17,6 +28,8 @@ if(-not(Test-Path $env:XDG_CONFIG_HOME)){
 }
 
 # Functions
+#-------------------------------------------------------------------------------
+
 function Set-Title() {
     $repo = git rev-parse --show-toplevel 2>$null
     if ($LASTEXITCODE -eq 0) {
@@ -28,6 +41,8 @@ function Set-Title() {
 }
 
 # Aliases
+#-------------------------------------------------------------------------------
+
 function cd_set_title { Set-Location -Path "$args"; Set-Title }
 Set-Alias -Force -Option AllScope -Name cd -Value cd_set_title
 
@@ -38,7 +53,7 @@ Set-Alias -Force -Option AllScope -Name clear -Value clear_screen
 function git_add { git add $args }
 Set-Alias -Force -Option AllScope -Name ga -Value git_add
 
-function git_add_all { git add -A }
+function git_add_all { git add -A $args }
 Set-Alias -Force -Option AllScope -Name gaa -Value git_add_all
 
 function git_branch { git branch -v $args }
@@ -47,19 +62,19 @@ Set-Alias -Force -Option AllScope -Name gb -Value git_branch
 function git_commit { git commit -m $args }
 Set-Alias -Force -Option AllScope -Name gc -Value git_commit
 
-function git_commit_amend { git commit --amend }
+function git_commit_amend { git commit --amend $args }
 Set-Alias -Force -Option AllScope -Name gca -Value git_commit_amend
 
 function git_checkout { git checkout $args }
 Set-Alias -Force -Option AllScope -Name gco -Value git_checkout
 
-function git_diff { git diff }
+function git_diff { git diff $args }
 Set-Alias -Force -Option AllScope -Name gd -Value git_diff
 
-function git_diff_staged { git diff --staged }
+function git_diff_staged { git diff --staged $args }
 Set-Alias -Force -Option AllScope -Name gds -Value git_diff_staged
 
-function git_log { git log --pretty=history }
+function git_log { git log --pretty=history $args }
 Set-Alias -Force -Option AllScope -Name gl -Value git_log
 
 function git_push { git push $args }
@@ -74,10 +89,10 @@ Set-Alias -Force -Option AllScope -Name grb -Value git_rebase
 function git_remote { git remote -v $args }
 Set-Alias -Force -Option AllScope -Name gr -Value git_remote
 
-function git_status { git status }
+function git_status { git status $args }
 Set-Alias -Force -Option AllScope -Name gs -Value git_status
 
-function git_status_untracked { git status -u }
+function git_status_untracked { git status -u $args }
 Set-Alias -Force -Option AllScope -Name gsu -Value git_status_untracked
 
 function list { eza -l $args }
@@ -104,8 +119,12 @@ function virtual_env_enable { .\venv\Scripts\Activate.ps1 }
 Set-Alias -Force -Option AllScope -Name va -Value virtual_env_enable
 
 # Hooks
+#-------------------------------------------------------------------------------
+
 # NOTE: Doesn't work on powershell 5.
 # Invoke-Expression "$(direnv hook pwsh)"
 
 # Startup
+#-------------------------------------------------------------------------------
+
 Set-Title

@@ -12,8 +12,8 @@ $base_dir = Resolve-Path -Path "$PSScriptRoot\.."
 $env:XDG_CONFIG_HOME = "$env:USERPROFILE\.config"
 
 # Import dependencies
-Import-Module "$base_dir.\utils\fs" -Force
-Import-Module "$base_dir.\utils\system" -Force
+Import-Module "$base_dir.\config\powershell\modules\utils\fs" -Force
+Import-Module "$base_dir.\config\powershell\modules\utils\system" -Force
 
 # Import deployment modules
 Import-Module "$base_dir.\deploy\modules\alacritty" -Force -Prefix alacritty_

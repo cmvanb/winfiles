@@ -3,7 +3,6 @@
 #-------------------------------------------------------------------------------
 
 $base_dir = Resolve-Path -Path "$PSScriptRoot\..\.."
-Import-Module "$base_dir.\utils\fs" -Force
 
 function deploy {
     link_or_copy `

@@ -3,7 +3,6 @@
 #-------------------------------------------------------------------------------
 
 $base_dir = Resolve-Path -Path "$PSScriptRoot\..\.."
-Import-Module "$base_dir.\utils\fs" -Force
 
 # NOTE: The destination path is for a scoop installation, consider handling other locations.
 $target_dir = "$env:USERPROFILE\scoop\apps\vscode\current\data\user-data\User"

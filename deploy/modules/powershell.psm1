@@ -3,12 +3,29 @@
 #-------------------------------------------------------------------------------
 
 $base_dir = Resolve-Path -Path "$PSScriptRoot\..\.."
-Import-Module "$base_dir.\utils\fs" -Force
 
 function deploy {
+    # Powershell 5 -------------------------------------------------------------
+    # Install modules.
+    link_or_copy `
+        -source "$base_dir\config\powershell\modules" `
+        -destination "$env:USERPROFILE\Documents\WindowsPowerShell\Modules"
+
+    # Install profile.
     link_or_copy `
         -source "$base_dir\config\powershell\Profile.ps1" `
         -destination "$env:USERPROFILE\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1"
+
+    # Powershell 7 -------------------------------------------------------------
+    # Install modules.
+    link_or_copy `
+        -source "$base_dir\config\powershell\modules" `
+        -destination "$env:USERPROFILE\Documents\PowerShell\Modules"
+
+    # Install profile.
+    link_or_copy `
+        -source "$base_dir\config\powershell\Profile.ps1" `
+        -destination "$env:USERPROFILE\Documents\PowerShell\Microsoft.PowerShell_profile.ps1"
 }
 
 function undeploy {
