@@ -17,6 +17,7 @@ Import-Module "$base_dir.\config\powershell\modules\utils\system" -Force
 
 # Import deployment modules
 Import-Module "$base_dir.\deploy\modules\alacritty" -Force -Prefix alacritty_
+Import-Module "$base_dir.\deploy\modules\bat" -Force -Prefix bat_
 Import-Module "$base_dir.\deploy\modules\git" -Force -Prefix git_
 Import-Module "$base_dir.\deploy\modules\nvim" -Force -Prefix nvim_
 Import-Module "$base_dir.\deploy\modules\powershell" -Force -Prefix ps_

@@ -1,0 +1,5 @@
+# bat is like cat, but better
+
+# use the custom theme
+--theme="carbon-dark"
+--italic-text=always
