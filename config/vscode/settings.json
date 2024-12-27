@@ -8,7 +8,7 @@
         100,
     ],
     "terminal.external.windowsExec": "wt.exe",
-    "terminal.integrated.defaultProfile.windows": "PowerShell 5",
+    "terminal.integrated.defaultProfile.windows": "PowerShell 7",
     "terminal.integrated.profiles.windows": {
         "PowerShell 5": {
             "path": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
