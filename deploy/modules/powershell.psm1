@@ -29,7 +29,11 @@ function deploy {
 }
 
 function undeploy {
+    force_delete "$env:USERPROFILE\Documents\WindowsPowerShell\Modules"
     force_delete "$env:USERPROFILE\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1"
+
+    force_delete "$env:USERPROFILE\Documents\PowerShell\Modules"
+    force_delete "$env:USERPROFILE\Documents\PowerShell\Microsoft.PowerShell_profile.ps1"
 }
 
 Export-ModuleMember -Function *

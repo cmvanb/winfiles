@@ -92,6 +92,8 @@ function ensure_directory($path) {
 }
 
 function force_delete($path) {
+    # TODO: Handle symlinks.
+
     if (exists $path) {
         Remove-Item -Force -Recurse -Path $path -ErrorVariable removeFailed
 
