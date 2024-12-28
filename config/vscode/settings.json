@@ -20,6 +20,9 @@
     },
 	"terminal.integrated.fontSize": 16,
     "workbench.editor.empty.hint": "hidden",
+    "vim.handleKeys": {
+        "<C-v>": false,
+    },
     "vim.normalModeKeyBindingsNonRecursive": [
         {
             "before": ["<C-j>"],
@@ -56,7 +59,7 @@
             ]
         },
     ],
-    "vim.useSystemClipboard": false,
+    "vim.useSystemClipboard": true,
     "powershell.integratedConsole.showOnStartup": false,
     "redhat.telemetry.enabled": false,
 }

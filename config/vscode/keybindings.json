@@ -6,5 +6,13 @@
   { "key": "ctrl+q",       "command": "workbench.action.closeActiveEditor" },
   { "key": "ctrl+t",       "command": "workbench.action.terminal.toggleTerminal", "when": "terminal.active" },
   { "key": "ctrl+shift+t", "command": "workbench.action.terminal.openNativeConsole" },
-  { "key": "ctrl+w",       "command": "" }
+  { "key": "ctrl+w",       "command": "" },
+  {
+    "key": "alt+v",
+    "command": "vim.remap",
+    "when": "inputFocus && vim.mode == 'Normal'",
+    "args": {
+      "after": ["<C-v>"]
+    }
+  },
 ]
