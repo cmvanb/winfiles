@@ -12,17 +12,19 @@ $base_dir = Resolve-Path -Path "$PSScriptRoot\.."
 $env:XDG_CONFIG_HOME = "$env:USERPROFILE\.config"
 
 # Import dependencies
-Import-Module "$base_dir.\config\powershell\modules\utils\fs" -Force
-Import-Module "$base_dir.\config\powershell\modules\utils\system" -Force
+Import-Module "$base_dir\config\powershell\modules\utils\fs" -Force
+Import-Module "$base_dir\config\powershell\modules\utils\system" -Force
 
 # Import deployment modules
-Import-Module "$base_dir.\deploy\modules\alacritty" -Force -Prefix alacritty_
-Import-Module "$base_dir.\deploy\modules\bat" -Force -Prefix bat_
-Import-Module "$base_dir.\deploy\modules\git" -Force -Prefix git_
-Import-Module "$base_dir.\deploy\modules\nvim" -Force -Prefix nvim_
-Import-Module "$base_dir.\deploy\modules\powershell" -Force -Prefix ps_
-Import-Module "$base_dir.\deploy\modules\vscode" -Force -Prefix vscode_
-Import-Module "$base_dir.\deploy\modules\windows-terminal" -Force -Prefix wt_
+Import-Module "$base_dir\deploy\modules\alacritty" -Force -Prefix alacritty_
+Import-Module "$base_dir\deploy\modules\bat" -Force -Prefix bat_
+Import-Module "$base_dir\deploy\modules\git" -Force -Prefix git_
+Import-Module "$base_dir\deploy\modules\nvim" -Force -Prefix nvim_
+Import-Module "$base_dir\deploy\modules\powershell" -Force -Prefix ps_
+Import-Module "$base_dir\deploy\modules\python" -Force -Prefix python_
+Import-Module "$base_dir\deploy\modules\theme" -Force -Prefix theme_
+Import-Module "$base_dir\deploy\modules\vscode" -Force -Prefix vscode_
+Import-Module "$base_dir\deploy\modules\windows-terminal" -Force -Prefix wt_
 
 # Deploy profile
 #-------------------------------------------------------------------------------
@@ -33,6 +35,8 @@ alacritty_deploy
 git_deploy
 nvim_deploy
 ps_deploy
+python_deploy
+theme_deploy
 vscode_deploy
 wt_deploy
 
