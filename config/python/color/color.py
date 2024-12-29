@@ -5,19 +5,22 @@
 
 class Color():
     def __init__(self, input: str):
+        if input.startswith('#'):
+            input = input[1:]
+
         if len(input) != 6:
-            raise ValueError('Must be 6 chars.')
+            raise ValueError(f'`{input}` must be 6 chars.')
 
         try:
             _ = int(input, 16)
 
         except ValueError:
-            raise ValueError('Not a hexadecimal value.')
+            raise ValueError(f'`{input}` not a hexadecimal value.')
 
         self.hex = input
-        self.r = int(hex[0:2], 16)
-        self.g = int(hex[2:4], 16)
-        self.b = int(hex[4:6], 16)
+        self.r = int(self.hex[0:2], 16)
+        self.g = int(self.hex[2:4], 16)
+        self.b = int(self.hex[4:6], 16)
 
     def to_hex(self):
         return self.hex
