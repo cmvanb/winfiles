@@ -1,5 +1,6 @@
 {
-    "explorer.confirmDelete": false,
+    /* Editor settings
+    --------------------------------------------------------------------------*/
     "editor.cursorBlinking": "solid",
 	"editor.fontFamily": "IosevkaTerm NF, Consolas, 'Courier New', monospace",
 	"editor.fontSize": 16,
@@ -7,6 +8,13 @@
         80,
         100,
     ],
+
+    /* File explorer settings
+    --------------------------------------------------------------------------*/
+    "explorer.confirmDelete": false,
+
+    /* Terminal settings
+    --------------------------------------------------------------------------*/
     "terminal.external.windowsExec": "wt.exe",
     "terminal.integrated.defaultProfile.windows": "PowerShell 7",
     "terminal.integrated.profiles.windows": {
@@ -19,10 +27,17 @@
         },
     },
 	"terminal.integrated.fontSize": 16,
+
+    /* Workbench settings
+    --------------------------------------------------------------------------*/
     "workbench.editor.empty.hint": "hidden",
+
+    /* VSCodeVim settings
+    --------------------------------------------------------------------------*/
     "vim.handleKeys": {
         "<C-v>": false,
     },
+    "vim.leader": " ",
     "vim.normalModeKeyBindingsNonRecursive": [
         {
             "before": ["<C-j>"],
@@ -36,13 +51,43 @@
             "before": ["H"],
             "commands": [
                 "editor.action.outdentLines"
-            ]
+            ],
         },
         {
             "before": ["L"],
             "commands": [
                 "editor.action.indentLines"
-            ]
+            ],
+        },
+        {
+            "before": ["<leader>", ":"],
+            "commands": [
+                "workbench.action.showCommands"
+            ],
+        },
+        {
+            "before": ["<leader>", "e"],
+            "commands": [
+                "workbench.files.action.focusFilesExplorer"
+            ],
+        },
+        {
+            "before": ["<leader>", "p"],
+            "commands": [
+                "workbench.extensions.action.focusExtensionsView"
+            ],
+        },
+        {
+            "before": ["<leader>", "g"],
+            "commands": [
+                "workbench.action.findInFiles"
+            ],
+        },
+        {
+            "before": ["<leader>", "f"],
+            "commands": [
+                "workbench.action.quickOpen"
+            ],
         },
     ],
     "vim.visualModeKeyBindingsNonRecursive": [
@@ -50,16 +95,19 @@
             "before": ["H"],
             "commands": [
                 "editor.action.outdentLines"
-            ]
+            ],
         },
         {
             "before": ["L"],
             "commands": [
                 "editor.action.indentLines"
-            ]
+            ],
         },
     ],
     "vim.useSystemClipboard": true,
+
+    /* Other extension settings
+    --------------------------------------------------------------------------*/
     "powershell.integratedConsole.showOnStartup": false,
     "redhat.telemetry.enabled": false,
 }
