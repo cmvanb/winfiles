@@ -118,6 +118,22 @@ Set-Alias -Force -Option AllScope -Name type -Value Get-Command
 function virtual_env_enable { .\venv\Scripts\Activate.ps1 }
 Set-Alias -Force -Option AllScope -Name va -Value virtual_env_enable
 
+# Prompt
+#-------------------------------------------------------------------------------
+
+# This prompt provides the current working directory to the shell, enabling
+# the user to spawn new shells in the same directory.
+function prompt {
+    $loc = $executionContext.SessionState.Path.CurrentLocation;
+
+    $out = ""
+    if ($loc.Provider.Name -eq "FileSystem") {
+      $out += "$([char]27)]9;9;`"$($loc.ProviderPath)`"$([char]27)\"
+    }
+    $out += "PS $loc$('>' * ($nestedPromptLevel + 1)) ";
+    return $out
+}
+
 # Hooks
 #-------------------------------------------------------------------------------
 
