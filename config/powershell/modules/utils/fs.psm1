@@ -2,16 +2,21 @@
 # Filesystem utilities
 #-------------------------------------------------------------------------------
 
-function exists($path) {
+function exists([string]$path) {
     return (Test-Path -Path $path)
 }
 
-function is_directory($path) {
+function is_directory([string]$path) {
     return Test-Path -Path $path -PathType Container
 }
 
-function is_file($path) {
+function is_file([string]$path) {
     return Test-Path -Path $path -PathType Leaf
+}
+
+function is_link([string]$path) {
+    $file = Get-Item $path -Force -ea SilentlyContinue
+    return [bool]($file.Attributes -band [IO.FileAttributes]::ReparsePoint)
 }
 
 # NOTE: If you are getting "The system cannot find the file specified.",
@@ -80,6 +85,10 @@ function delete_link($path) {
         return
     }
 
+    if (-not (is_link $path)) {
+        return
+    }
+
     (Get-Item $path).Delete()
 
     print "delete link: ``$path``"
@@ -92,14 +101,19 @@ function ensure_directory($path) {
 }
 
 function force_delete($path) {
-    # TODO: Handle symlinks.
+    if (-not (exists $path)) {
+        return
+    }
 
-    if (exists $path) {
-        Remove-Item -Force -Recurse -Path $path -ErrorVariable removeFailed
+    if (is_link $path) {
+        delete_link $path
+        return
+    }
 
-        if (-not ($removeFailed)) {
-            print "delete: ``$path``"
-        }
+    Remove-Item -Force -Recurse -Path $path -ErrorVariable removeFailed
+
+    if (-not ($removeFailed)) {
+        print "delete: ``$path``"
     }
 }
 
