@@ -37,6 +37,7 @@
     "vim.handleKeys": {
         "<C-v>": false,
     },
+    "vim.hlsearch": true,
     "vim.leader": " ",
     "vim.normalModeKeyBindingsNonRecursive": [
         {
@@ -57,6 +58,12 @@
             "before": ["L"],
             "commands": [
                 "editor.action.indentLines"
+            ],
+        },
+        {
+            "before": ["<leader>", "l"],
+            "commands": [
+                ":noh",
             ],
         },
         {
