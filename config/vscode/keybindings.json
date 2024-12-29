@@ -15,4 +15,9 @@
       "after": ["<C-v>"]
     }
   },
+  { "key": "ctrl+alt+l", "command": "workbench.action.focusNextGroup" },
+  { "key": "ctrl+alt+h", "command": "workbench.action.focusPreviousGroup" },
+  { "key": "ctrl+alt+n", "command": "workbench.action.splitEditorRight" },
+  { "key": "ctrl+alt+p", "command": "workbench.action.splitEditorDown" },
+  { "key": "ctrl+alt+q", "command": "workbench.action.closeGroup" },
 ]
