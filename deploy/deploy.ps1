@@ -17,6 +17,7 @@ Import-Module "$base_dir\deploy\modules\git" -Force -Prefix git_
 Import-Module "$base_dir\deploy\modules\nvim" -Force -Prefix nvim_
 Import-Module "$base_dir\deploy\modules\powershell" -Force -Prefix ps_
 Import-Module "$base_dir\deploy\modules\python" -Force -Prefix python_
+Import-Module "$base_dir\deploy\modules\scripts" -Force -Prefix scripts_
 Import-Module "$base_dir\deploy\modules\theme" -Force -Prefix theme_
 Import-Module "$base_dir\deploy\modules\vscode" -Force -Prefix vscode_
 Import-Module "$base_dir\deploy\modules\windows-terminal" -Force -Prefix wt_
@@ -35,6 +36,7 @@ theme_deploy
 bat_deploy
 git_deploy
 nvim_deploy
+scripts_deploy
 vscode_deploy
 wt_deploy
 

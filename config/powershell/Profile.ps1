@@ -9,23 +9,20 @@
 # Imports
 Import-Module -Force "utils\fs"
 Import-Module -Force "utils\system"
+Import-Module -Force "scripts\print-environment"
 
 # Environment variables
 [System.Environment]::SetEnvironmentVariable('XDG_CACHE_HOME', $env:USERPROFILE + '\.cache', 'User')
-[System.Environment]::SetEnvironmentVariable('XDG_DATA_HOME', $env:USERPROFILE + '\.local\share', 'User')
 [System.Environment]::SetEnvironmentVariable('XDG_CONFIG_HOME', $env:USERPROFILE + '\.config', 'User')
+[System.Environment]::SetEnvironmentVariable('XDG_DATA_HOME', $env:USERPROFILE + '\.local\share', 'User')
+[System.Environment]::SetEnvironmentVariable('XDG_SCRIPTS_HOME', $env:USERPROFILE + '\.local\scripts', 'User')
 [System.Environment]::SetEnvironmentVariable('PYTHONPYCACHEPREFIX', $env:USERPROFILE + '\.cache\python', 'User')
 
 # XDG directories
-if(-not(Test-Path $env:XDG_CACHE_HOME)){
-	mkdir $env:XDG_CACHE_HOME
-}
-if(-not(Test-Path $env:XDG_DATA_HOME)){
-	mkdir $env:XDG_DATA_HOME
-}
-if(-not(Test-Path $env:XDG_CONFIG_HOME)){
-	mkdir $env:XDG_DATA_HOME
-}
+ensure_directory $env:XDG_CACHE_HOME
+ensure_directory $env:XDG_CONFIG_HOME
+ensure_directory $env:XDG_DATA_HOME
+ensure_directory $env:XDG_SCRIPTS_HOME
 
 # Functions
 #-------------------------------------------------------------------------------
