@@ -52,7 +52,7 @@ off = '\033[0m'
 
 def esc(color, bright=True):
     """Return ANSI escape sequence for supplied color and brightness."""
-    return '' if windows or args.unformatted else \
+    return '' if args.unformatted else \
         '\033[%dm' % (colors[color] + (90 if bright else 30))
 
 def parse_args():
@@ -102,7 +102,7 @@ def parse_args():
 
     global args
     args = parser.parse_args()
-    if windows or args.unformatted:
+    if args.unformatted:
         global off
         off = ''
 
@@ -126,20 +126,18 @@ def search():
     """
     import os
     env = os.environ
+
     if args.match:
         import re
         p = re.compile(args.match, flags=re.IGNORECASE if args.ignore else 0)
         for key, value in list(env.items()):
             if args.exact_match:
                 if key != args.match and value != args.match:
-                    # key2 = '%s$' % key
-                    # value2 = '%s$' % value
-                    # print('key: ' + key2 + ', value: ' + value2)
-                    # if not p.search(key2) and not p.search(value2):
                     del env[key]
             else:
                 if not p.search(key) and not p.search(value):
                     del env[key]
+
     # return potentially empty dictionary of environment variables
     return env
 
@@ -149,20 +147,18 @@ def print_one(key, value, fmt):
     controlled by the '--split' and '--key' command line arguments.
     """
 
-    key_color_seq = esc('white', False)
+    key_color_seq = esc('cyan', True)
 
     # select value color
-    if value.startswith('/'):
-        # show unix path values in different color
-        value_color_seq = esc('cyan', False)
-    else:
-        try:
-            # show integer values in different color
-            int(value)
-            value_color_seq = esc('red', True)
-        except ValueError:
-            # show all other values in default color
-            value_color_seq = esc('yellow', False)
+    try:
+        # show integer values in different color
+        int(value)
+        value_color_seq = esc('red', True)
+
+    except ValueError:
+        # show all other values in default color
+        value_color_seq = esc('white', False)
+
     # print multivalue variables on separate lines
     if args.split and not args.unformatted:
         values = value.split(args.split)
@@ -176,6 +172,7 @@ def print_one(key, value, fmt):
                     print(fmt % (key_color_seq, key, off,
                                  value_color_seq, value, off))
             return
+
     # print single value variable or unseparated multivalue variable
     print(fmt % (key_color_seq, key, off,
                  value_color_seq, value, off))
