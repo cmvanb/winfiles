@@ -18,7 +18,7 @@ function deploy {
 }
 
 function undeploy {
-    print "└> Uninstalling bat configuration."
+    print "└> Uninstalling eza configuration."
 
     force_delete "$env:APPDATA\eza\theme.yml"
 }
