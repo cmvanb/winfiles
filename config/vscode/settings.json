@@ -37,11 +37,14 @@
     /* Window settings
     --------------------------------------------------------------------------*/
     "window.customTitleBarVisibility": "windowed",
+    "window.autoDetectHighContrast": false,
 
     /* Workbench settings
     --------------------------------------------------------------------------*/
     "workbench.activityBar.location": "hidden",
     "workbench.colorTheme": "Custom Theme",
+    "workbench.preferredHighContrastColorTheme": "Custom Theme",
+    "workbench.preferredDarkColorTheme": "Custom Theme",
     "workbench.editor.empty.hint": "hidden",
 
     /* VSCodeVim settings
