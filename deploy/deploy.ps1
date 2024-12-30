@@ -12,7 +12,6 @@ $base_dir = Resolve-Path -Path "$PSScriptRoot\.."
 $env:XDG_CONFIG_HOME = "$env:USERPROFILE\.config"
 
 # Import deployment modules
-Import-Module "$base_dir\deploy\modules\alacritty" -Force -Prefix alacritty_
 Import-Module "$base_dir\deploy\modules\bat" -Force -Prefix bat_
 Import-Module "$base_dir\deploy\modules\git" -Force -Prefix git_
 Import-Module "$base_dir\deploy\modules\nvim" -Force -Prefix nvim_
@@ -33,7 +32,6 @@ python_deploy
 theme_deploy
 
 # Deploy all other modules.
-alacritty_deploy
 bat_deploy
 git_deploy
 nvim_deploy
