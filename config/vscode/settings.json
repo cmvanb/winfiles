@@ -28,8 +28,14 @@
     },
 	"terminal.integrated.fontSize": 16,
 
+    /* Window settings
+    --------------------------------------------------------------------------*/
+    "window.customTitleBarVisibility": "windowed",
+
     /* Workbench settings
     --------------------------------------------------------------------------*/
+    "workbench.activityBar.location": "hidden",
+    "workbench.colorTheme": "Custom Theme",
     "workbench.editor.empty.hint": "hidden",
 
     /* VSCodeVim settings
