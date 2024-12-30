@@ -117,4 +117,8 @@
     --------------------------------------------------------------------------*/
     "powershell.integratedConsole.showOnStartup": false,
     "redhat.telemetry.enabled": false,
+    "Lua.diagnostics.globals": [
+        "vim"
+    ],
+    "Lua.runtime.version": "Lua 5.1",
 }
