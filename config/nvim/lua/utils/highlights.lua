@@ -7,17 +7,17 @@ local HighlightsUtils = {}
 -- Imports
 --------------------------------------------------------------------------------
 
-local theme = reload('theme.system')
+local SystemTheme = reload('theme.system')
 
 -- Private functions
 --------------------------------------------------------------------------------
 
 local function _get_24bit_theme_color(color_name)
-    return theme.color_hash(color_name)
+    return SystemTheme.color_hash(color_name)
 end
 
 local function _get_ansi_theme_color(color_name)
-    return theme.color_name_to_ansi_index(color_name)
+    return SystemTheme.color_ansi_index(color_name)
 end
 
 local function _construct_gui_options(foreground_color, background_color, special_color, attributes)

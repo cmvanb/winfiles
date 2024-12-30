@@ -2,7 +2,10 @@
 # Color utilities
 #-------------------------------------------------------------------------------
 
+from dataclasses import dataclass
 
+
+@dataclass
 class Color():
     def __init__(self, input: str):
         if input.startswith('#'):
@@ -21,6 +24,9 @@ class Color():
         self.r = int(self.hex[0:2], 16)
         self.g = int(self.hex[2:4], 16)
         self.b = int(self.hex[4:6], 16)
+
+    def __str__(self):
+        return self.as_hex()
 
     def as_hex(self):
         return self.hex
