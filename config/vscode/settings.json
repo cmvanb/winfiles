@@ -52,6 +52,7 @@
     "vim.hlsearch": true,
     "vim.leader": " ",
     "vim.normalModeKeyBindingsNonRecursive": [
+        /* Navigation */
         {
             "before": ["<C-j>"],
             "after": ["<C-d>"]
@@ -60,6 +61,8 @@
             "before": ["<C-k>"],
             "after": ["<C-u>"]
         },
+
+        /* Editing */
         {
             "before": ["H"],
             "commands": [
@@ -72,18 +75,36 @@
                 "editor.action.indentLines"
             ],
         },
+
+        /* Vim search */
         {
             "before": ["<leader>", "l"],
             "commands": [
                 ":noh",
             ],
         },
+
+        /* VSCode search */
         {
             "before": ["<leader>", ":"],
             "commands": [
                 "workbench.action.showCommands"
             ],
         },
+        {
+            "before": ["<leader>", "g"],
+            "commands": [
+                "workbench.action.findInFiles"
+            ],
+        },
+        {
+            "before": ["<leader>", "f"],
+            "commands": [
+                "workbench.action.quickOpen"
+            ],
+        },
+
+        /* VSCode sidebar */
         {
             "before": ["<leader>", "e"],
             "commands": [
@@ -97,15 +118,9 @@
             ],
         },
         {
-            "before": ["<leader>", "g"],
+            "before": ["<leader>", "d"],
             "commands": [
-                "workbench.action.findInFiles"
-            ],
-        },
-        {
-            "before": ["<leader>", "f"],
-            "commands": [
-                "workbench.action.quickOpen"
+                "workbench.view.debug"
             ],
         },
     ],
