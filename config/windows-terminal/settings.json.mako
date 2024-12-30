@@ -1,8 +1,24 @@
+<% from theme import color_hash %>\
 {
     "$help": "https://aka.ms/terminal-documentation",
     "$schema": "https://aka.ms/terminal-profiles-schema",
-    "actions": 
+
+    /* General
+    ----------------------------------------------------------------------*/
+    "copyFormatting": "none",
+    "copyOnSelect": false,
+    "newTabMenu":
     [
+        {
+            "type": "remainingProfiles"
+        }
+    ],
+
+    /* Key bindings
+    ----------------------------------------------------------------------*/
+    "actions":
+    [
+        /* Unbind */
         {
             "command": "unbound",
             "keys": "alt+left"
@@ -27,26 +43,28 @@
             "command": "unbound",
             "keys": "ctrl+shift+pgdn"
         },
+
+        /* Basic */
         {
             "command": "paste",
-            "id": "User.paste",
             "keys": "ctrl+v"
         },
         {
             "command": "find",
-            "id": "User.find",
             "keys": "ctrl+shift+f"
+        },
+
+        /* Navigation */
+        {
+            "command": { "action": "scrollDown", "rowsToScroll": 40 },
+            "keys": "ctrl+j"
         },
         {
             "command": { "action": "scrollUp", "rowsToScroll": 40 },
             "keys": "ctrl+k"
         },
         {
-            "command": { "action": "scrollDown", "rowsToScroll": 40 },
-            "keys": "ctrl+j"
-        },
-        {
-            "command": 
+            "command":
             {
                 "action": "moveFocus",
                 "direction": "left"
@@ -55,7 +73,7 @@
             "keys": "ctrl+alt+h"
         },
         {
-            "command": 
+            "command":
             {
                 "action": "moveFocus",
                 "direction": "right"
@@ -63,8 +81,10 @@
             "id": "User.moveFocus.87C324ED",
             "keys": "ctrl+alt+l"
         },
+
+        /* Pane management */
         {
-            "command": 
+            "command":
             {
                 "action": "splitPane",
                 "split": "right",
@@ -74,7 +94,7 @@
             "keys": "ctrl+alt+n"
         },
         {
-            "command": 
+            "command":
             {
                 "action": "splitPane",
                 "split": "down",
@@ -84,30 +104,27 @@
             "keys": "ctrl+alt+p"
         },
     ],
-    "copyFormatting": "none",
-    "copyOnSelect": false,
+
+    /* Profiles
+    ----------------------------------------------------------------------*/
     "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
-    "newTabMenu": 
-    [
-        {
-            "type": "remainingProfiles"
-        }
-    ],
-    "profiles": 
+    "profiles":
     {
-        "defaults": 
+        "defaults":
         {
             "antialiasingMode": "cleartype",
             "bellStyle": "window",
+            "colorScheme": "Carbon Dark",
             "cursorShape": "filledBox",
-            "font": 
+            "experimental.retroTerminalEffect": false,
+            "font":
             {
                 "face": "IosevkaTerm Nerd Font"
             },
             "historySize": 10000,
             "intenseTextStyle": "bold"
         },
-        "list": 
+        "list":
         [
             {
                 "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -nologo",
@@ -130,6 +147,36 @@
             }
         ]
     },
-    "schemes": [],
+
+    /* Color schemes
+    ----------------------------------------------------------------------*/
+    "schemes":
+    [
+        {
+            "name": "Carbon Dark",
+
+            "background": "${color_hash('terminal_bg')}",
+            "foreground": "${color_hash('terminal_text')}",
+            "cursorColor": "${color_hash('terminal_text')}",
+            "selectionBackground": "${color_hash('primary_15')}",
+
+            "black": "${color_hash('ansi_black')}",
+            "red": "${color_hash('ansi_red')}",
+            "green": "${color_hash('ansi_green')}",
+            "yellow": "${color_hash('ansi_yellow')}",
+            "blue": "${color_hash('ansi_blue')}",
+            "purple": "${color_hash('ansi_magenta')}",
+            "cyan": "${color_hash('ansi_cyan')}",
+            "white": "${color_hash('ansi_white')}",
+            "brightBlack": "${color_hash('ansi_brblack')}",
+            "brightRed": "${color_hash('ansi_brred')}",
+            "brightGreen": "${color_hash('ansi_brgreen')}",
+            "brightYellow": "${color_hash('ansi_bryellow')}",
+            "brightBlue": "${color_hash('ansi_brblue')}",
+            "brightPurple": "${color_hash('ansi_brmagenta')}",
+            "brightCyan": "${color_hash('ansi_brcyan')}",
+            "brightWhite": "${color_hash('ansi_brwhite')}",
+        }
+    ],
     "themes": []
 }
