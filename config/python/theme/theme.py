@@ -89,6 +89,14 @@ def get_color(name: str) -> Color:
     return config.colors[name]
 
 
+def color_hash(name: str) -> str:
+    return get_color(name).with_hash()
+
+
+def color_zerox(name: str) -> str:
+    return get_color(name).with_zerox()
+
+
 if __name__ == "__main__":
     config = parse_config()
     print(config)

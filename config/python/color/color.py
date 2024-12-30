@@ -22,11 +22,17 @@ class Color():
         self.g = int(self.hex[2:4], 16)
         self.b = int(self.hex[4:6], 16)
 
-    def to_hex(self):
+    def as_hex(self):
         return self.hex
 
-    def to_css_rgba(self, alpha):
+    def as_css_rgba(self, alpha):
         return f'rgba({self.r}, {self.g}, {self.b}, {alpha})'
 
-    def to_rgb_int(self):
+    def as_rgb_int(self):
         return f'{self.r},{self.g},{self.b}'
+
+    def with_hash(self):
+        return f'#{self.hex}'
+
+    def with_zerox(self):
+        return f'Ox{self.hex}'
