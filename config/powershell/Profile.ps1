@@ -95,13 +95,13 @@ Set-Alias -Force -Option AllScope -Name gs -Value git_status
 function git_status_untracked { git status -u $args }
 Set-Alias -Force -Option AllScope -Name gsu -Value git_status_untracked
 
-function list { eza -l --color=always --group-directories-first --time-style=long-iso $args }
+function list { eza -l --color=always --git-ignore --group-directories-first --time-style=long-iso $args }
 Set-Alias -Force -Option AllScope -Name ls -Value list
 
 function list_all { eza -al --color=always --group-directories-first --time-style=long-iso $args }
 Set-Alias -Force -Option AllScope -Name lsa -Value list_all
 
-function list_tree { eza -lT --color=always --group-directories-first --time-style=long-iso $args }
+function list_tree { eza -lT --color=always --git-ignore --group-directories-first --time-style=long-iso $args }
 Set-Alias -Force -Option AllScope -Name lst -Value list_tree
 
 function list_tree_all { eza -alT --color=always --group-directories-first --time-style=long-iso $args }
