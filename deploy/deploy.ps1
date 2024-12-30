@@ -13,6 +13,7 @@ $env:XDG_CONFIG_HOME = "$env:USERPROFILE\.config"
 
 # Import deployment modules
 Import-Module "$base_dir\deploy\modules\bat" -Force -Prefix bat_
+Import-Module "$base_dir\deploy\modules\eza" -Force -Prefix eza_
 Import-Module "$base_dir\deploy\modules\git" -Force -Prefix git_
 Import-Module "$base_dir\deploy\modules\nvim" -Force -Prefix nvim_
 Import-Module "$base_dir\deploy\modules\powershell" -Force -Prefix ps_
@@ -34,6 +35,7 @@ theme_deploy
 
 # Deploy all other modules.
 bat_deploy
+eza_deploy
 git_deploy
 nvim_deploy
 scripts_deploy
