@@ -11,10 +11,6 @@ $base_dir = Resolve-Path -Path "$PSScriptRoot\.."
 # Environment variables needed by deployment modules
 $env:XDG_CONFIG_HOME = "$env:USERPROFILE\.config"
 
-# Import dependencies
-Import-Module "$base_dir\config\powershell\modules\utils\fs" -Force
-Import-Module "$base_dir\config\powershell\modules\utils\system" -Force
-
 # Import deployment modules
 Import-Module "$base_dir\deploy\modules\alacritty" -Force -Prefix alacritty_
 Import-Module "$base_dir\deploy\modules\bat" -Force -Prefix bat_
@@ -31,12 +27,16 @@ Import-Module "$base_dir\deploy\modules\windows-terminal" -Force -Prefix wt_
 
 Write-Output "Deploying windows profile from ``$base_dir`` to ``$env:USERPROFILE``..."
 
-alacritty_deploy
-git_deploy
-nvim_deploy
+# Deploy modules depended on by other modules.
 ps_deploy
 python_deploy
 theme_deploy
+
+# Deploy all other modules.
+alacritty_deploy
+bat_deploy
+git_deploy
+nvim_deploy
 vscode_deploy
 wt_deploy
 

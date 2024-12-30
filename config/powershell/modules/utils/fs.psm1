@@ -2,6 +2,9 @@
 # Filesystem utilities
 #-------------------------------------------------------------------------------
 
+Import-Module "utils\system" -Force
+
+
 function exists([string]$path) {
     return (Test-Path -Path $path)
 }

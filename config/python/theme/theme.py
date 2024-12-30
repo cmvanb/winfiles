@@ -28,7 +28,9 @@ class ThemeConfig():
 # TODO: Consider moving to the ThemeConfig class.
 def pickle_config(config: ThemeConfig):
     try:
-        with open(CACHE_PATH, 'w') as file:
+        CACHE_PATH.parent.mkdir(parents=True, exist_ok=True)
+
+        with open(CACHE_PATH, 'wb') as file:
             pickle.dump(config, file)
 
     except Exception as e:
@@ -37,7 +39,7 @@ def pickle_config(config: ThemeConfig):
 
 def unpickle_config() -> ThemeConfig:
     try:
-        with open(CACHE_PATH, 'r') as file:
+        with open(CACHE_PATH, 'rb') as file:
             return pickle.load(file)
 
     except Exception as e:
