@@ -23,6 +23,6 @@
   {
     "key": "escape",
     "command": "workbench.action.focusActiveEditorGroup",
-    "when": "sideBarFocus"
+    "when": "!editorFocus"
   },
 ]
