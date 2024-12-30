@@ -41,7 +41,7 @@ function make_link_cmd($source, $destination) {
     }
 
     if ($result -match "symbolic link created") {
-        print "link: ``$source`` -> ``$destination``"
+        print " └> Link: ``$source`` -> ``$destination``"
 
     } elseif ($result -eq "The system cannot find the file specified.") {
         throw "Failed to create link (access error): ``$source`` -> ``$destination``"
@@ -63,7 +63,7 @@ function make_link_ps($source, $destination) {
         -ErrorVariable linkFailed
 
     if (-not ($linkFailed)) {
-        print "link: ``$source`` -> ``$destination``"
+        print " └> Link: ``$source`` -> ``$destination``"
     }
 }
 
@@ -79,7 +79,7 @@ function make_link_ps_elevated($source, $destination) {
         -ErrorVariable linkFailed
 
     if (-not ($linkFailed)) {
-        print "link: ``$source`` -> ``$destination``"
+        print " └> Link: ``$source`` -> ``$destination``"
     }
 }
 
@@ -94,7 +94,7 @@ function delete_link($path) {
 
     (Get-Item $path).Delete()
 
-    print "delete link: ``$path``"
+    print " └> Delete link: ``$path``"
 }
 
 function ensure_directory($path) {
@@ -116,7 +116,7 @@ function force_delete($path) {
     Remove-Item -Force -Recurse -Path $path -ErrorVariable removeFailed
 
     if (-not ($removeFailed)) {
-        print "delete: ``$path``"
+        print " └> Delete: ``$path``"
     }
 }
 
@@ -144,7 +144,7 @@ function force_copy($source, $destination) {
     }
 
     if (-not ($copyFailed)) {
-        print "copy: ``$source`` -> ``$destination``"
+        print " └> Copy: ``$source`` -> ``$destination``"
     }
 }
 

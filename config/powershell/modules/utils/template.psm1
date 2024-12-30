@@ -10,7 +10,7 @@ function render_mako_template($template, $target) {
 
     $result = python -m template "$template" "$target"
     if ($LASTEXITCODE -eq 0) {
-        Write-Output "render template ``$template`` to ``$target``..."
+        Write-Output " └> Render template ``$template`` -> ``$target``"
         $result
     }
 }

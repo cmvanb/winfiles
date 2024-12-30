@@ -26,6 +26,8 @@ Import-Module "$base_dir\deploy\modules\windows-terminal" -Force -Prefix wt_
 # Deploy profile
 #-------------------------------------------------------------------------------
 
+# TODO: Add flag to skip python modules.
+
 Write-Output "Deploying windows profile from ``$base_dir`` to ``$env:USERPROFILE``..."
 
 # Deploy modules depended on by other modules.
