@@ -3,10 +3,11 @@
 #-------------------------------------------------------------------------------
 
 from dataclasses import dataclass
-import luadata
 import os
 from pathlib import Path
 import pickle
+
+import luadata
 import yaml
 
 from color import Color
