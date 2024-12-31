@@ -100,6 +100,26 @@
         "textLink.activeForeground": "${color_hash('yellow_6')}",
         "textLink.foreground": "${color_hash('primary_15')}",
 
+        /* Terminal */
+        "terminal.background": "${color_hash('terminal_bg')}",
+        "terminal.foreground": "${color_hash('terminal_text')}",
+        "terminal.ansiBlack": "${color_hash('ansi_black')}",
+        "terminal.ansiRed": "${color_hash('ansi_red')}",
+        "terminal.ansiGreen": "${color_hash('ansi_green')}",
+        "terminal.ansiYellow": "${color_hash('ansi_yellow')}",
+        "terminal.ansiBlue": "${color_hash('ansi_blue')}",
+        "terminal.ansiMagenta": "${color_hash('ansi_magenta')}",
+        "terminal.ansiCyan": "${color_hash('ansi_cyan')}",
+        "terminal.ansiWhite": "${color_hash('ansi_white')}",
+        "terminal.ansiBrightBlack": "${color_hash('ansi_brblack')}",
+        "terminal.ansiBrightRed": "${color_hash('ansi_brred')}",
+        "terminal.ansiBrightGreen": "${color_hash('ansi_brgreen')}",
+        "terminal.ansiBrightYellow": "${color_hash('ansi_bryellow')}",
+        "terminal.ansiBrightBlue": "${color_hash('ansi_brblue')}",
+        "terminal.ansiBrightMagenta": "${color_hash('ansi_brmagenta')}",
+        "terminal.ansiBrightCyan": "${color_hash('ansi_brcyan')}",
+        "terminal.ansiBrightWhite": "${color_hash('ansi_brwhite')}",
+
         /* Editor */
         "editor.background": "${color_hash('editor_bg')}",
         "editor.foreground": "${color_hash('editor_text_normal')}",
