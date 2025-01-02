@@ -37,7 +37,7 @@
         "list.activeSelectionForeground": "${color_hash('text_15')}",
         "list.inactiveSelectionBackground": "${color_hash('primary_4')}",
         "list.inactiveSelectionForeground": "${color_hash('text_12')}",
-        "list.highlightForeground": "${color_hash('debug')}",
+        "list.highlightForeground": "${color_hash('yellow_6')}",
         "list.hoverBackground": "${color_hash('text_2')}",
 
         /* Editor groups */
@@ -56,7 +56,9 @@
         /* Breadcrumb */
         "breadcrumb.background": "${color_hash('primary_3')}",
         "breadcrumb.foreground": "${color_hash('text_10')}",
-        "breadcrumb.focusForeground": "${color_hash('text_15')}",
+        "breadcrumb.focusForeground": "${color_hash('text_12')}",
+        "breadcrumb.activeSelectionForeground": "${color_hash('text_15')}",
+        "breadcrumbPicker.background": "${color_hash('primary_4')}",
 
         /* Panel (e.g. integrated terminal) */
         "panel.background": "${color_hash('primary_3')}",
@@ -122,14 +124,32 @@
 
         /* Editor */
         "editor.background": "${color_hash('editor_bg')}",
-        "editor.foreground": "${color_hash('editor_text_normal')}",
+        /* editor_text_normal */
+        "editor.foreground": "${color_hash('secondary_12')}",
+
+        /* Editor cursor */
         "editorCursor.background": "${color_hash('gray_0')}",
         "editorCursor.foreground": "${color_hash('text_15')}",
         "editor.lineHighlightBackground": "${color_hash('primary_2')}",
-        "editor.rangeHighlightBackground": "${color_hash('debug')}",
+
+        /* Editor word highlighting */
+        "editor.wordHighlightBackground": "${color_hash('primary_3')}",
+
+        /* Editor selection highlighting */
         "editor.selectionBackground": "${color_hash('primary_10')}60",
-        "editor.selectionForeground": "${color_hash('gray_0')}",
+        /* NOTE: This setting is not working.
+            see: https://github.com/microsoft/vscode/issues/36490 */
+        "editor.selectionForeground": "${color_hash('debug')}",
+        "editor.inactiveSelectionBackground": "${color_hash('primary_10')}60",
+        "editor.selectionHighlightBackground": "${color_hash('primary_10')}60",
+        "editor.selectionHighlightBorder": "${color_hash('primary_10')}",
+
+        /* Editor find highlighting */
         "editor.findMatchBackground": "${color_hash('magenta_5')}",
+        "editor.findMatchForeground": "${color_hash('gray_0')}",
+        "editor.findMatchHighlightBackground": "${color_hash('green_4')}",
+        "editor.findMatchHighlightForeground": "${color_hash('gray_0')}",
+        "editor.rangeHighlightBackground": "${color_hash('magenta_5')}40",
 
         /* Editor diagnostics */
         "editorError.foreground": "${color_hash('red_5')}",
@@ -137,11 +157,24 @@
         "editorInfo.foreground": "${color_hash('text_10')}",
         "editorHint.foreground": "${color_hash('orange_7')}",
 
-        /* Editor guttter */
+        /* Editor bracket matching */
+        "editorBracketMatch.background": "${color_hash('primary_3')}",
+        "editorBracketMatch.border": "${color_hash('primary_6')}",
+
+        /* Editor guttter & line numbers */
         "editorGutter.background": "${color_hash('editor_bg')}",
         "editorGutter.addedBackground": "${color_hash('green_3')}",
         "editorGutter.modifiedBackground": "${color_hash('orange_3')}",
         "editorGutter.deletedBackground": "${color_hash('red_3')}",
+        "editorLineNumber.foreground": "${color_hash('primary_6')}",
+        "editorLineNumber.activeForeground": "${color_hash('primary_12')}",
+
+        /* Editor ruler */
+        "editorRuler.foreground": "${color_hash('gray_2')}",
+
+        /* Editor indentation guides */
+        "editorIndentGuide.background": "${color_hash('gray_2')}",
+        "editorIndentGuide.activeBackground": "${color_hash('gray_4')}",
 
         /* Minimap */
         "minimap.background": "${color_hash('primary_2')}",
@@ -161,6 +194,22 @@
         "scrollbarSlider.background": "${color_hash('primary_6')}40",
         "scrollbarSlider.hoverBackground": "${color_hash('primary_6')}40",
         "scrollbarSlider.activeBackground": "${color_hash('primary_10')}60",
+
+        /* Git decorations */
+        "gitDecoration.addedResourceForeground": "${color_hash('green_4')}",
+        "gitDecoration.untrackedResourceForeground": "${color_hash('green_4')}",
+        "gitDecoration.modifiedResourceForeground": "${color_hash('orange_4')}",
+        "gitDecoration.stageModifiedResourceForeground": "${color_hash('orange_4')}",
+        "gitDecoration.deletedResourceForeground": "${color_hash('red_4')}",
+        "gitDecoration.stageDeletedResourceForeground": "${color_hash('red_4')}",
+        "gitDecoration.renamedResourceForeground": "${color_hash('purple_4')}",
+        "gitDecoration.ignoredResourceForeground": "${color_hash('text_6')}",
+        "gitDecoration.conflictingResourceForeground": "${color_hash('red_4')}",
+        "gitDecoration.submoduleResourceForeground": "${color_hash('purple_6')}",
+
+        /* TODO:
+            - breadcrumb dropdown
+        */
     },
 
     /* Syntax

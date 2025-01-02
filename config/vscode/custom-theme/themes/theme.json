@@ -36,7 +36,7 @@
         "list.activeSelectionForeground": "#dfefff",
         "list.inactiveSelectionBackground": "#01244b",
         "list.inactiveSelectionForeground": "#b2c2d2",
-        "list.highlightForeground": "#ff00ff",
+        "list.highlightForeground": "#ffde4d",
         "list.hoverBackground": "#1d2d3d",
 
         /* Editor groups */
@@ -55,7 +55,9 @@
         /* Breadcrumb */
         "breadcrumb.background": "#011d3c",
         "breadcrumb.foreground": "#94a4b4",
-        "breadcrumb.focusForeground": "#dfefff",
+        "breadcrumb.focusForeground": "#b2c2d2",
+        "breadcrumb.activeSelectionForeground": "#dfefff",
+        "breadcrumbPicker.background": "#01244b",
 
         /* Panel (e.g. integrated terminal) */
         "panel.background": "#011d3c",
@@ -121,14 +123,32 @@
 
         /* Editor */
         "editor.background": "#0b0b0e",
-        "editor.foreground": "#0c6c84",
+        /* editor_text_normal */
+        "editor.foreground": "#0999b1",
+
+        /* Editor cursor */
         "editorCursor.background": "#0b0b0e",
         "editorCursor.foreground": "#dfefff",
         "editor.lineHighlightBackground": "#00152d",
-        "editor.rangeHighlightBackground": "#ff00ff",
+
+        /* Editor word highlighting */
+        "editor.wordHighlightBackground": "#011d3c",
+
+        /* Editor selection highlighting */
         "editor.selectionBackground": "#055eb560",
-        "editor.selectionForeground": "#0b0b0e",
+        /* NOTE: This setting is not working.
+            see: https://github.com/microsoft/vscode/issues/36490 */
+        "editor.selectionForeground": "#ff00ff",
+        "editor.inactiveSelectionBackground": "#055eb560",
+        "editor.selectionHighlightBackground": "#055eb560",
+        "editor.selectionHighlightBorder": "#055eb5",
+
+        /* Editor find highlighting */
         "editor.findMatchBackground": "#ff0066",
+        "editor.findMatchForeground": "#0b0b0e",
+        "editor.findMatchHighlightBackground": "#00cc7a",
+        "editor.findMatchHighlightForeground": "#0b0b0e",
+        "editor.rangeHighlightBackground": "#ff006640",
 
         /* Editor diagnostics */
         "editorError.foreground": "#e60f00",
@@ -136,11 +156,24 @@
         "editorInfo.foreground": "#94a4b4",
         "editorHint.foreground": "#ffc266",
 
-        /* Editor guttter */
+        /* Editor bracket matching */
+        "editorBracketMatch.background": "#011d3c",
+        "editorBracketMatch.border": "#023469",
+
+        /* Editor guttter & line numbers */
         "editorGutter.background": "#0b0b0e",
         "editorGutter.addedBackground": "#00995c",
         "editorGutter.modifiedBackground": "#995c00",
         "editorGutter.deletedBackground": "#b30c00",
+        "editorLineNumber.foreground": "#023469",
+        "editorLineNumber.activeForeground": "#057cd3",
+
+        /* Editor ruler */
+        "editorRuler.foreground": "#282932",
+
+        /* Editor indentation guides */
+        "editorIndentGuide.background": "#282932",
+        "editorIndentGuide.activeBackground": "#454757",
 
         /* Minimap */
         "minimap.background": "#00152d",
@@ -160,6 +193,22 @@
         "scrollbarSlider.background": "#02346940",
         "scrollbarSlider.hoverBackground": "#02346940",
         "scrollbarSlider.activeBackground": "#055eb560",
+
+        /* Git decorations */
+        "gitDecoration.addedResourceForeground": "#00cc7a",
+        "gitDecoration.untrackedResourceForeground": "#00cc7a",
+        "gitDecoration.modifiedResourceForeground": "#ff9500",
+        "gitDecoration.stageModifiedResourceForeground": "#ff9500",
+        "gitDecoration.deletedResourceForeground": "#cc0e00",
+        "gitDecoration.stageDeletedResourceForeground": "#cc0e00",
+        "gitDecoration.renamedResourceForeground": "#7400cc",
+        "gitDecoration.ignoredResourceForeground": "#596979",
+        "gitDecoration.conflictingResourceForeground": "#cc0e00",
+        "gitDecoration.submoduleResourceForeground": "#a733ff",
+
+        /* TODO:
+            - breadcrumb dropdown
+        */
     },
 
     /* Syntax
