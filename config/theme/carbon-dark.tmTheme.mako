@@ -16,19 +16,19 @@
                 <key>settings</key>
                 <dict>
                     <key>background</key>
-                    <string>${color_hash("editor_bg")}</string>
+                    <string>${color_hash('editor_bg')}</string>
                     <key>caret</key>
-                    <string>${color_hash("text_0")}</string>
+                    <string>${color_hash('text_0')}</string>
                     <key>foreground</key>
-                    <string>${color_hash("secondary_9")}</string>
+                    <string>${color_hash('secondary_9')}</string>
                     <key>invisibles</key>
-                    <string>${color_hash("debug")}</string>
+                    <string>${color_hash('debug')}</string>
                     <key>lineHighlight</key>
-                    <string>${color_hash("primary_6")}</string>
+                    <string>${color_hash('primary_6')}</string>
                     <key>selection</key>
-                    <string>${color_hash("primary_15")}</string>
+                    <string>${color_hash('primary_15')}</string>
                     <key>gutterForeground</key>
-                    <string>${color_hash("primary_8")}</string>
+                    <string>${color_hash('primary_8')}</string>
                 </dict>
             </dict>
             <dict>
@@ -39,7 +39,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>${color_hash("terminal_text")}</string>
+                    <string>${color_hash('terminal_text')}</string>
                 </dict>
             </dict>
             <dict>
@@ -50,7 +50,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>${color_hash("secondary_9")}</string>
+                    <string>${color_hash('secondary_9')}</string>
                 </dict>
             </dict>
             <!--
@@ -64,7 +64,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>${color_hash("secondary_9")}</string>
+                    <string>${color_hash('secondary_9')}</string>
                 </dict>
             </dict>
             <dict>
@@ -78,7 +78,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>${color_hash("secondary_9")}</string>
+                    <string>${color_hash('secondary_9')}</string>
                 </dict>
             </dict>
             <dict>
@@ -89,7 +89,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>${color_hash("secondary_9")}</string>
+                    <string>${color_hash('secondary_9')}</string>
                 </dict>
             </dict>
             <dict>
@@ -100,7 +100,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>${color_hash("secondary_9")}</string>
+                    <string>${color_hash('secondary_9')}</string>
                 </dict>
             </dict>
             <!--
@@ -114,7 +114,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>${color_hash("text_8")}</string>
+                    <string>${color_hash('text_8')}</string>
                     <key>fontStyle</key>
                     <string>italic</string>
                 </dict>
@@ -130,7 +130,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>${color_hash("secondary_12")}</string>
+                    <string>${color_hash('secondary_12')}</string>
                 </dict>
             </dict>
             <dict>
@@ -141,7 +141,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>${color_hash("secondary_12")}</string>
+                    <string>${color_hash('secondary_12')}</string>
                 </dict>
             </dict>
             <!--
@@ -155,7 +155,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>${color_hash("magenta_5")}</string>
+                    <string>${color_hash('magenta_5')}</string>
                 </dict>
             </dict>
             <!--
@@ -169,7 +169,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>${color_hash("yellow_5")}</string>
+                    <string>${color_hash('yellow_5')}</string>
                     <key>fontStyle</key>
                     <string>bold</string>
                 </dict>
@@ -182,7 +182,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>${color_hash("yellow_5")}</string>
+                    <string>${color_hash('yellow_5')}</string>
                     <key>fontStyle</key>
                     <string>bold</string>
                 </dict>
@@ -195,7 +195,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>${color_hash("yellow_5")}</string>
+                    <string>${color_hash('yellow_5')}</string>
                     <key>fontStyle</key>
                     <string>bold</string>
                 </dict>
@@ -208,7 +208,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>${color_hash("yellow_5")}</string>
+                    <string>${color_hash('yellow_5')}</string>
                     <key>fontStyle</key>
                     <string>bold</string>
                 </dict>
@@ -224,7 +224,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>${color_hash("green_4")}</string>
+                    <string>${color_hash('green_4')}</string>
                 </dict>
             </dict>
             <!--
@@ -238,7 +238,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>${color_hash("orange_6")}</string>
+                    <string>${color_hash('orange_6')}</string>
                 </dict>
             </dict>
             <dict>
@@ -249,7 +249,7 @@
                 <string>constant.other.format-spec, constant.other.placeholder, punctuation.definition.string.template, punctuation.definition.template-expression, punctuation.quasi, punctuation.section.embedded, punctuation.section.interpolation, string.interpolated</string>
                 <dict>
                     <key>foreground</key>
-                    <string>${color_hash("yellow_5")}</string>
+                    <string>${color_hash('yellow_5')}</string>
                 </dict>
             </dict>
             <!--
@@ -263,7 +263,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>${color_hash("green_4")}</string>
+                    <string>${color_hash('green_4')}</string>
                     <key>fontStyle</key>
                     <string>bold</string>
                 </dict>
@@ -276,7 +276,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>${color_hash("green_4")}</string>
+                    <string>${color_hash('green_4')}</string>
                     <key>fontStyle</key>
                     <string>bold</string>
                 </dict>
@@ -292,7 +292,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>${color_hash("green_4")}</string>
+                    <string>${color_hash('green_4')}</string>
                 </dict>
             </dict>
             <dict>
@@ -303,7 +303,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>${color_hash("green_4")}</string>
+                    <string>${color_hash('green_4')}</string>
                 </dict>
             </dict>
             <!--
@@ -317,7 +317,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>${color_hash("secondary_15")}</string>
+                    <string>${color_hash('secondary_15')}</string>
                     <key>fontStyle</key>
                     <string>bold</string>
                 </dict>
@@ -333,7 +333,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>${color_hash("red_6")}</string>
+                    <string>${color_hash('red_6')}</string>
                 </dict>
             </dict>
             <!--
@@ -347,7 +347,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>${color_hash("red_5")}</string>
+                    <string>${color_hash('red_5')}</string>
                 </dict>
             </dict>
             <!--
@@ -361,7 +361,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>${color_hash("debug")}</string>
+                    <string>${color_hash('debug')}</string>
                 </dict>
             </dict>
         </array>
