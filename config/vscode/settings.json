@@ -16,11 +16,11 @@
         "*.json": "jsonc"
     },
 
-    /* File explorer settings
+    /* File explorer
     --------------------------------------------------------------------------*/
     "explorer.confirmDelete": false,
 
-    /* Terminal settings
+    /* Terminal
     --------------------------------------------------------------------------*/
     "terminal.external.windowsExec": "wt.exe",
     "terminal.integrated.defaultProfile.windows": "PowerShell 7",
@@ -35,20 +35,21 @@
     },
 	"terminal.integrated.fontSize": 16,
 
-    /* Window settings
+    /* UI visibility
     --------------------------------------------------------------------------*/
     "window.customTitleBarVisibility": "windowed",
-    "window.autoDetectHighContrast": false,
-
-    /* Workbench settings
-    --------------------------------------------------------------------------*/
+    "breadcrumbs.enabled": false,
     "workbench.activityBar.location": "hidden",
+
+    /* Color theme
+    --------------------------------------------------------------------------*/
+    "window.autoDetectHighContrast": false,
     "workbench.colorTheme": "Custom Theme",
     "workbench.preferredHighContrastColorTheme": "Custom Theme",
     "workbench.preferredDarkColorTheme": "Custom Theme",
     "workbench.editor.empty.hint": "hidden",
 
-    /* VSCodeVim settings
+    /* VSCodeVim
     --------------------------------------------------------------------------*/
     "vim.handleKeys": {
         "<C-v>": false,
@@ -155,7 +156,7 @@
     ],
     "vim.useSystemClipboard": true,
 
-    /* Other extension settings
+    /* Other extensions
     --------------------------------------------------------------------------*/
     "powershell.integratedConsole.showOnStartup": false,
     "redhat.telemetry.enabled": false,
