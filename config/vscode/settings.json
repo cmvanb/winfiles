@@ -1,6 +1,7 @@
 {
     /* Editor settings
     --------------------------------------------------------------------------*/
+    "editor.bracketPairColorization.enabled": false,
     "editor.cursorBlinking": "solid",
 	"editor.fontFamily": "IosevkaTerm NF, Consolas, 'Courier New', monospace",
 	"editor.fontSize": 16,
@@ -128,6 +129,17 @@
         },
     ],
     "vim.visualModeKeyBindingsNonRecursive": [
+        /* Navigation */
+        {
+            "before": ["<C-j>"],
+            "after": ["<C-d>"]
+        },
+        {
+            "before": ["<C-k>"],
+            "after": ["<C-u>"]
+        },
+
+        /* Editing */
         {
             "before": ["H"],
             "commands": [
