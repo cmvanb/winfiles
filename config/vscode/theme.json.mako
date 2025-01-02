@@ -219,7 +219,13 @@
             "name": "Comment",
             "scope": [
                 "comment",
-                "punctuation.definition.comment"
+                "comment text",
+                "punctuation.definition.comment",
+                "string.comment",
+                "string.quoted.docstring.multi.python",
+                "string.quoted.docstring.multi.python punctuation.definition.string.begin.python",
+                "string.quoted.docstring.multi.python punctuation.definition.string.end.python",
+                "text.cancelled",
             ],
             "settings": {
                 "fontStyle": "italic",
@@ -230,37 +236,22 @@
             "name": "Variables",
             "scope": [
                 "variable",
-                "string constant.other.placeholder"
+                "string constant.other.placeholder",
             ],
             "settings": {
-                "foreground": "${color_hash('secondary_9')}"
-            }
-        },
-        {
-            "name": "Colors",
-            "scope": [
-                "constant.other.color"
-            ],
-            "settings": {
-                "foreground": "#ffffff"
-            }
-        },
-        {
-            "name": "Invalid",
-            "scope": [
-                "invalid",
-                "invalid.illegal"
-            ],
-            "settings": {
-                "foreground": "${color_hash('red_5')}"
+                "foreground": "${color_hash('secondary_12')}"
             }
         },
         {
             "name": "Keyword, Storage",
             "scope": [
                 "keyword",
+                "keyword.control",
+                "keyword.other",
+                "keyword.other.template",
+                "keyword.other.substitution",
                 "storage.type",
-                "storage.modifier"
+                "storage.modifier",
             ],
             "settings": {
                 "fontStyle": "bold",
@@ -268,23 +259,45 @@
             }
         },
         {
-            "name": "Operator, Misc",
+            "name": "Operator, Punctuation",
             "scope": [
-                "keyword.control",
-                "constant.other.color",
                 "punctuation",
-                "meta.tag",
                 "punctuation.definition.tag",
                 "punctuation.separator.inheritance.php",
                 "punctuation.definition.tag.html",
                 "punctuation.definition.tag.begin.html",
                 "punctuation.definition.tag.end.html",
                 "punctuation.section.embedded",
-                "keyword.other.template",
-                "keyword.other.substitution"
+                "meta.tag",
             ],
             "settings": {
                 "foreground": "${color_hash('green_4')}"
+            }
+        },
+        {
+            "name": "Function, Special Method",
+            "scope": [
+                "entity.name.function",
+                "meta.function-call",
+                "variable.function",
+                "support.function",
+                "keyword.other.special-method",
+            ],
+            "settings": {
+                "fontStyle": "bold",
+                "foreground": "${color_hash('secondary_15')}"
+            }
+        },
+        {
+            "name": "Parameters, Arguments",
+            "scope": [
+                "variable.parameter",
+                "meta.parameters",
+                "meta.function-call.arguments",
+            ],
+            "settings": {
+                "fontStyle": "",
+                "foreground": "${color_hash('secondary_12')}"
             }
         },
         /* Tag (e.g. YAML keys) */
@@ -296,22 +309,7 @@
                 "markup.deleted.git_gutter"
             ],
             "settings": {
-                "fontStyle": "bold",
                 "foreground": "${color_hash('secondary_12')}"
-            }
-        },
-        {
-            "name": "Function, Special Method",
-            "scope": [
-                "entity.name.function",
-                "meta.function-call",
-                "variable.function",
-                "support.function",
-                "keyword.other.special-method"
-            ],
-            "settings": {
-                "fontStyle": "bold",
-                "foreground": "${color_hash('secondary_15')}"
             }
         },
         {
@@ -335,19 +333,34 @@
             }
         },
         {
-            "name": "Number, Constant, Function Argument, Tag Attribute, Embedded",
+            "name": "Number, Unit",
             "scope": [
                 "constant.numeric",
-                "constant.language",
-                "support.constant",
-                "constant.character",
-                "constant.escape",
-                "variable.parameter",
                 "keyword.other.unit",
-                "keyword.other"
             ],
             "settings": {
                 "foreground": "${color_hash('red_6')}"
+            }
+        },
+        {
+            "name": "Constant",
+            "scope": [
+                "constant.language",
+                "support.meta",
+            ],
+            "settings": {
+                "foreground": "${color_hash('red_5')}"
+            }
+        },
+        {
+            "name": "String quotes",
+            "scope": [
+                "storage.type.string",
+                "punctuation.definition.string",
+                "punctuation.definition.string string",
+            ],
+            "settings": {
+                "foreground": "${color_hash('orange_8')}",
             }
         },
         {
@@ -366,11 +379,9 @@
             }
         },
         {
-            "name": "Class, Support",
+            "name": "Types",
             "scope": [
-                "entity.name",
                 "support.type",
-                "support.class",
                 "support.other.namespace.use.php",
                 "meta.use.php",
                 "support.other.namespace.php",
@@ -382,12 +393,15 @@
             }
         },
         {
-            "name": "Entity Types",
+            "name": "Class, Entity",
             "scope": [
-                "support.type"
+                "entity.name",
+                "meta.class",
+                "support.class",
             ],
             "settings": {
-                "foreground": "${color_hash('secondary_12')}"
+                "fontStyle": "bold",
+                "foreground": "${color_hash('secondary_15')}"
             }
         },
         {
@@ -445,84 +459,20 @@
             }
         },
         {
-            "name": "Attributes",
-            "scope": [
-                "entity.other.attribute-name"
-            ],
-            "settings": {
-                "foreground": "${color_hash('secondary_12')}"
-            }
-        },
-        {
-            "name": "HTML Attributes",
-            "scope": [
-                "text.html.basic entity.other.attribute-name.html",
-                "text.html.basic entity.other.attribute-name"
-            ],
-            "settings": {
-                "fontStyle": "italic",
-                "foreground": "${color_hash('debug')}"
-            }
-        },
-        {
-            "name": "CSS Classes",
-            "scope": [
-                "entity.other.attribute-name.class"
-            ],
-            "settings": {
-                "foreground": "${color_hash('secondary_15')}"
-            }
-        },
-        {
-            "name": "CSS ID's",
-            "scope": [
-                "source.sass keyword.control"
-            ],
-            "settings": {
-                "fontStyle": "bold",
-                "foreground": "${color_hash('yellow_5')}"
-            }
-        },
-        {
-            "name": "Inserted",
-            "scope": [
-                "markup.inserted"
-            ],
-            "settings": {
-                "foreground": "${color_hash('debug')}"
-            }
-        },
-        {
-            "name": "Deleted",
-            "scope": [
-                "markup.deleted"
-            ],
-            "settings": {
-                "foreground": "${color_hash('debug')}"
-            }
-        },
-        {
-            "name": "Changed",
-            "scope": [
-                "markup.changed"
-            ],
-            "settings": {
-                "foreground": "${color_hash('debug')}"
-            }
-        },
-        {
             "name": "Regular Expressions",
             "scope": [
                 "string.regexp"
             ],
             "settings": {
                 "fontStyle": "bold",
-                "foreground": "${color_hash('yellow_5')}"
+                "foreground": "${color_hash('red_5')}"
             }
         },
         {
             "name": "Escape Characters",
             "scope": [
+                "constant.character",
+                "constant.escape",
                 "constant.character.escape"
             ],
             "settings": {
@@ -838,6 +788,91 @@
             "settings": {
                 "foreground": "${color_hash('debug')}"
             }
-        }
+        },
+        {
+            "name": "Attributes",
+            "scope": [
+                "entity.other.attribute-name"
+            ],
+            "settings": {
+                "foreground": "${color_hash('secondary_12')}"
+            }
+        },
+        {
+            "name": "HTML Attributes",
+            "scope": [
+                "text.html.basic entity.other.attribute-name.html",
+                "text.html.basic entity.other.attribute-name"
+            ],
+            "settings": {
+                "fontStyle": "italic",
+                "foreground": "${color_hash('debug')}"
+            }
+        },
+        {
+            "name": "CSS Classes",
+            "scope": [
+                "entity.other.attribute-name.class"
+            ],
+            "settings": {
+                "foreground": "${color_hash('secondary_15')}"
+            }
+        },
+        {
+            "name": "CSS ID's",
+            "scope": [
+                "source.sass keyword.control"
+            ],
+            "settings": {
+                "fontStyle": "bold",
+                "foreground": "${color_hash('yellow_5')}"
+            }
+        },
+        {
+            "name": "Inserted",
+            "scope": [
+                "markup.inserted"
+            ],
+            "settings": {
+                "foreground": "${color_hash('debug')}"
+            }
+        },
+        {
+            "name": "Deleted",
+            "scope": [
+                "markup.deleted"
+            ],
+            "settings": {
+                "foreground": "${color_hash('debug')}"
+            }
+        },
+        {
+            "name": "Changed",
+            "scope": [
+                "markup.changed"
+            ],
+            "settings": {
+                "foreground": "${color_hash('debug')}"
+            }
+        },
+        {
+            "name": "Colors",
+            "scope": [
+                "constant.other.color"
+            ],
+            "settings": {
+                "foreground": "${color_hash('debug')}"
+            }
+        },
+        {
+            "name": "Invalid",
+            "scope": [
+                "invalid",
+                "invalid.illegal"
+            ],
+            "settings": {
+                "foreground": "${color_hash('red_5')}"
+            }
+        },
     ]
 }
