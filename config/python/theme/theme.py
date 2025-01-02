@@ -45,14 +45,14 @@ class ThemeConfig():
 
     @staticmethod
     def lua_dict(config):
-        dict = {
+        lua_dict = {
             'colors': { k: str(v) for k, v in config.colors.items() },
             'fonts': config.fonts,
         }
 
         try:
             LUA_DICT_PATH.parent.mkdir(parents=True, exist_ok=True)
-            luadata.write(LUA_DICT_PATH, dict, encoding='utf-8', indent='  ', prefix='return ')
+            luadata.write(LUA_DICT_PATH, lua_dict, encoding='utf-8', indent='  ', prefix='return ')
 
         except Exception as e:
             raise Exception(f'Error writing `{LUA_DICT_PATH}`: {e}')
