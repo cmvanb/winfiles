@@ -202,7 +202,7 @@
         "gitDecoration.stageModifiedResourceForeground": "${color_hash('orange_4')}",
         "gitDecoration.deletedResourceForeground": "${color_hash('red_4')}",
         "gitDecoration.stageDeletedResourceForeground": "${color_hash('red_4')}",
-        "gitDecoration.renamedResourceForeground": "${color_hash('purple_4')}",
+        "gitDecoration.renamedResourceForeground": "${color_hash('primary_15')}",
         "gitDecoration.ignoredResourceForeground": "${color_hash('text_6')}",
         "gitDecoration.conflictingResourceForeground": "${color_hash('red_4')}",
         "gitDecoration.submoduleResourceForeground": "${color_hash('purple_6')}",
