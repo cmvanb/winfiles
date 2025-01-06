@@ -81,11 +81,11 @@
             ],
         },
 
-        /* Vim search */
+        /* VSCode LSP */
         {
-            "before": ["<leader>", "l"],
+            "before": ["g", "r"],
             "commands": [
-                ":noh",
+                "references-view.findReferences",
             ],
         },
 
@@ -106,6 +106,16 @@
             "before": ["<leader>", "f"],
             "commands": [
                 "workbench.action.quickOpen"
+            ],
+        },
+        {
+            "before": ["<leader>", "l"],
+            "commands": [
+                ":noh",
+                "references-view.clear",
+                "search.action.clearSearchResults",
+                "workbench.view.explorer",
+                "workbench.action.focusActiveEditorGroup",
             ],
         },
 
