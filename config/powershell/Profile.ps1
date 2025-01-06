@@ -17,6 +17,7 @@ Import-Module -Force "scripts\print-environment"
 [System.Environment]::SetEnvironmentVariable('XDG_DATA_HOME', $env:USERPROFILE + '\.local\share', 'User')
 [System.Environment]::SetEnvironmentVariable('XDG_SCRIPTS_HOME', $env:USERPROFILE + '\.local\scripts', 'User')
 [System.Environment]::SetEnvironmentVariable('PYTHONPYCACHEPREFIX', $env:USERPROFILE + '\.cache\python', 'User')
+[System.Environment]::SetEnvironmentVariable('STARSHIP_CONFIG', $env:USERPROFILE + '\.config\starship\starship.toml', 'User')
 
 # XDG directories
 ensure_directory $env:XDG_CACHE_HOME
@@ -136,6 +137,8 @@ function prompt {
 
 # NOTE: Doesn't work on powershell 5.
 # Invoke-Expression "$(direnv hook pwsh)"
+
+Invoke-Expression (&starship init powershell)
 
 # Startup
 #-------------------------------------------------------------------------------
