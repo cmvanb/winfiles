@@ -10,11 +10,12 @@
         100,
     ],
 
-    /* Files settings
+    /* Files & folders settings
     --------------------------------------------------------------------------*/
     "files.associations": {
         "*.json": "jsonc"
     },
+    "window.openFoldersInNewWindow": "on",
 
     /* File explorer
     --------------------------------------------------------------------------*/
