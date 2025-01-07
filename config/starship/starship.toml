@@ -1,5 +1,7 @@
-[package]
-disabled = true
+command_timeout = 1000
 
 [directory]
 truncate_to_repo = false
+
+[package]
+disabled = true
