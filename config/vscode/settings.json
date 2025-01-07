@@ -163,6 +163,15 @@
                 "editor.action.indentLines"
             ],
         },
+
+        /* VSCode */
+        {
+            "before": ["<C-s>"],
+            "commands": [
+                "workbench.action.files.save",
+                "extension.vim_escape"
+            ],
+        }
     ],
     "vim.useSystemClipboard": true,
 
