@@ -1,0 +1,119 @@
+{
+    "remapKeys": {
+        "inProcess": []
+    },
+    "remapKeysToText": {
+        "inProcess": []
+    },
+    "remapShortcuts": {
+        "appSpecific": [],
+        "global": [
+            {
+                "newRemapKeys": "256",
+                "originalKeys": "164;32"
+            },
+            {
+                "newRemapKeys": "162;3",
+                "operationType": 0,
+                "originalKeys": "162;190",
+                "secondKeyOfChord": 0
+            },
+            {
+                "operationType": 1,
+                "originalKeys": "91;66",
+                "runProgramAlreadyRunningAction": 1,
+                "runProgramArgs": "",
+                "runProgramElevationLevel": 0,
+                "runProgramFilePath": "C:\\Users\\gr_cbe\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe",
+                "runProgramStartInDir": "",
+                "runProgramStartWindowType": 0,
+                "secondKeyOfChord": 0,
+                "unicodeText": "*Unsupported*"
+            },
+            {
+                "newRemapKeys": "122",
+                "originalKeys": "91;70"
+            },
+            {
+                "newRemapKeys": "256",
+                "originalKeys": "91;72"
+            },
+            {
+                "newRemapKeys": "256",
+                "originalKeys": "91;74"
+            },
+            {
+                "newRemapKeys": "256",
+                "originalKeys": "91;75"
+            },
+            {
+                "newRemapKeys": "91",
+                "originalKeys": "91;79"
+            },
+            {
+                "newRemapKeys": "164;115",
+                "operationType": 0,
+                "originalKeys": "91;81",
+                "secondKeyOfChord": 0
+            },
+            {
+                "operationType": 1,
+                "originalKeys": "91;84",
+                "runProgramAlreadyRunningAction": 1,
+                "runProgramArgs": " -w -1",
+                "runProgramElevationLevel": 0,
+                "runProgramFilePath": "C:\\Users\\gr_cbe\\AppData\\Local\\Microsoft\\WindowsApps\\wt.exe",
+                "runProgramStartInDir": "C:\\Users\\gr_cbe",
+                "runProgramStartWindowType": 0,
+                "secondKeyOfChord": 0,
+                "unicodeText": "*Unsupported*"
+            },
+            {
+                "newRemapKeys": "91;162;192",
+                "operationType": 0,
+                "originalKeys": "91;87",
+                "secondKeyOfChord": 0
+            },
+            {
+                "newRemapKeys": "164;160;9",
+                "operationType": 0,
+                "originalKeys": "91;160;72",
+                "secondKeyOfChord": 0
+            },
+            {
+                "newRemapKeys": "164;9",
+                "operationType": 0,
+                "originalKeys": "91;160;76",
+                "secondKeyOfChord": 0
+            },
+            {
+                "newRemapKeys": "91;37",
+                "operationType": 0,
+                "originalKeys": "91;162;72",
+                "secondKeyOfChord": 0
+            },
+            {
+                "newRemapKeys": "91;40",
+                "operationType": 0,
+                "originalKeys": "91;162;74",
+                "secondKeyOfChord": 0
+            },
+            {
+                "newRemapKeys": "91;38",
+                "operationType": 0,
+                "originalKeys": "91;162;75",
+                "secondKeyOfChord": 0
+            },
+            {
+                "newRemapKeys": "91;39",
+                "operationType": 0,
+                "originalKeys": "91;162;76",
+                "secondKeyOfChord": 0
+            }
+        ]
+    },
+    "remapShortcutsToText": {
+        "appSpecific": [],
+        "global": []
+    }
+}
