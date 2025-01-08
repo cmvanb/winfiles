@@ -1,5 +1,15 @@
 {
-    /* Editor settings
+    /* General settings
+    --------------------------------------------------------------------------*/
+    "window.openFoldersInNewWindow": "on",
+
+    /* UI visibility
+    --------------------------------------------------------------------------*/
+    "window.customTitleBarVisibility": "windowed",
+    "breadcrumbs.enabled": false,
+    "workbench.activityBar.location": "hidden",
+
+    /* Editor
     --------------------------------------------------------------------------*/
     "editor.bracketPairColorization.enabled": false,
     "editor.cursorBlinking": "solid",
@@ -10,12 +20,20 @@
         100,
     ],
 
-    /* Files & folders settings
+    /* Color theme
+    --------------------------------------------------------------------------*/
+    "window.autoDetectHighContrast": false,
+    "workbench.colorTheme": "Custom Theme",
+    "workbench.preferredHighContrastColorTheme": "Custom Theme",
+    "workbench.preferredDarkColorTheme": "Custom Theme",
+    "workbench.editor.empty.hint": "hidden",
+
+    /* Files
     --------------------------------------------------------------------------*/
     "files.associations": {
         "*.json": "jsonc"
     },
-    "window.openFoldersInNewWindow": "on",
+    "files.trimTrailingWhitespace": true,
 
     /* File explorer
     --------------------------------------------------------------------------*/
@@ -35,20 +53,6 @@
         },
     },
 	"terminal.integrated.fontSize": 16,
-
-    /* UI visibility
-    --------------------------------------------------------------------------*/
-    "window.customTitleBarVisibility": "windowed",
-    "breadcrumbs.enabled": false,
-    "workbench.activityBar.location": "hidden",
-
-    /* Color theme
-    --------------------------------------------------------------------------*/
-    "window.autoDetectHighContrast": false,
-    "workbench.colorTheme": "Custom Theme",
-    "workbench.preferredHighContrastColorTheme": "Custom Theme",
-    "workbench.preferredDarkColorTheme": "Custom Theme",
-    "workbench.editor.empty.hint": "hidden",
 
     /* VSCodeVim
     --------------------------------------------------------------------------*/
