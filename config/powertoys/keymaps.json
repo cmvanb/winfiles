@@ -51,12 +51,6 @@
                 "originalKeys": "91;79"
             },
             {
-                "newRemapKeys": "164;115",
-                "operationType": 0,
-                "originalKeys": "91;81",
-                "secondKeyOfChord": 0
-            },
-            {
                 "operationType": 1,
                 "originalKeys": "91;84",
                 "runProgramAlreadyRunningAction": 1,
@@ -69,7 +63,7 @@
                 "unicodeText": "*Unsupported*"
             },
             {
-                "newRemapKeys": "91;162;192",
+                "newRemapKeys": "164;115",
                 "operationType": 0,
                 "originalKeys": "91;87",
                 "secondKeyOfChord": 0
