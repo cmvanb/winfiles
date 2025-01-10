@@ -119,17 +119,17 @@ Set-Alias -Force -Option AllScope -Name va -Value virtual_env_enable
 # Prompt
 #-------------------------------------------------------------------------------
 
-# This prompt provides the current working directory to the shell, enabling
+# This prompt mod provides the current working directory to the shell, enabling
 # the user to spawn new shells in the same directory.
-function prompt {
+# see: https://learn.microsoft.com/en-us/windows/terminal/tutorials/new-tab-same-directory#zsh
+function Invoke-Starship-PreCommand {
     $loc = $executionContext.SessionState.Path.CurrentLocation;
-
-    $out = ""
-    if ($loc.Provider.Name -eq "FileSystem") {
-      $out += "$([char]27)]9;9;`"$($loc.ProviderPath)`"$([char]27)\"
+    $prompt = "$([char]27)]9;12$([char]7)"
+    if ($loc.Provider.Name -eq "FileSystem")
+    {
+        $prompt += "$([char]27)]9;9;`"$($loc.ProviderPath)`"$([char]27)\"
     }
-    $out += "PS $loc$('>' * ($nestedPromptLevel + 1)) ";
-    return $out
+    $host.ui.Write($prompt)
 }
 
 # Hooks
