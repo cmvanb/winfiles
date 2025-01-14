@@ -94,6 +94,22 @@
             ],
         },
 
+        /* VSCode general */
+        {
+            "before": ["<leader>", "o"],
+            "commands": [
+                "workbench.action.openRecent"
+            ],
+        },
+
+        /* VSCode AI chat */
+        {
+            "before": ["<leader>", "c"],
+            "commands": [
+                "workbench.action.chat.openInNewWindow"
+            ],
+        },
+
         /* VSCode search */
         {
             "before": ["<leader>", ":"],

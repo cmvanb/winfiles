@@ -1,21 +1,16 @@
 // Place your key bindings in this file to override the defaults
 [
+  /* Tab control */
   { "key": "ctrl+h",       "command": "workbench.action.previousEditor" },
   { "key": "ctrl+l",       "command": "workbench.action.nextEditor" },
   { "key": "ctrl+shift+h", "command": "workbench.action.moveEditorLeftInGroup"},
   { "key": "ctrl+shift+l", "command": "workbench.action.moveEditorRightInGroup"},
-  { "key": "ctrl+f",       "command": "workbench.action.quickOpen" },
   { "key": "ctrl+w",       "command": "workbench.action.closeActiveEditor" },
-  { "key": "ctrl+t",       "command": "workbench.action.terminal.toggleTerminal", "when": "terminal.active" },
-  { "key": "ctrl+shift+t", "command": "workbench.action.terminal.openNativeConsole" },
-  {
-    "key": "alt+v",
-    "command": "vim.remap",
-    "when": "inputFocus && vim.mode == 'Normal'",
-    "args": {
-      "after": ["<C-v>"]
-    }
-  },
+
+  /* Open files */
+  { "key": "ctrl+f",       "command": "workbench.action.quickOpen" },
+
+  /* Window/group control  */
   { "key": "ctrl+alt+l", "command": "workbench.action.focusNextGroup" },
   { "key": "ctrl+alt+h", "command": "workbench.action.focusPreviousGroup" },
   { "key": "ctrl+alt+n", "command": "workbench.action.splitEditorRight" },
@@ -26,24 +21,42 @@
     "command": "workbench.action.focusActiveEditorGroup",
     "when": "!editorFocus"
   },
+
+  /* Terminal */
+  { "key": "ctrl+t",       "command": "workbench.action.terminal.toggleTerminal", "when": "terminal.active" },
+  { "key": "ctrl+shift+t", "command": "workbench.action.terminal.openNativeConsole" },
+
+  /* VSCodeVim */
+  {
+    "key": "alt+v",
+    "command": "vim.remap",
+    "when": "inputFocus && vim.mode == 'Normal'",
+    "args": {
+      "after": ["<C-v>"]
+    }
+  },
+
+  /* Chat */
+  {
+    "key": "ctrl+n",
+    "command": "workbench.action.chat.newChat",
+    "when": "chatIsEnabled && inChat && chatLocation != 'editing-session'"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "-workbench.action.chat.newChat",
+    "when": "chatIsEnabled && inChat && chatLocation != 'editing-session'"
+  },
+
+  /* Quick fix */
   {
     "key": "ctrl+space",
     "command": "problems.action.showQuickFixes",
     "when": "problemFocus"
   },
   {
-    "key": "ctrl+.",
-    "command": "-problems.action.showQuickFixes",
-    "when": "problemFocus"
-  },
-  {
     "key": "ctrl+space",
     "command": "editor.action.quickFix",
-    "when": "editorHasCodeActionsProvider && textInputFocus && !editorReadonly"
-  },
-  {
-    "key": "ctrl+.",
-    "command": "-editor.action.quickFix",
     "when": "editorHasCodeActionsProvider && textInputFocus && !editorReadonly"
   },
   {
@@ -70,5 +83,15 @@
     "key": "ctrl+space",
     "command": "-workbench.action.terminal.sendSequence",
     "when": "terminalFocus && terminalShellIntegrationEnabled && !accessibilityModeEnabled && terminalShellType == 'pwsh'"
+  },
+  {
+    "key": "ctrl+.",
+    "command": "-problems.action.showQuickFixes",
+    "when": "problemFocus"
+  },
+  {
+    "key": "ctrl+.",
+    "command": "-editor.action.quickFix",
+    "when": "editorHasCodeActionsProvider && textInputFocus && !editorReadonly"
   },
 ]
