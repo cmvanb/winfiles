@@ -204,10 +204,17 @@
 
     /* Other extensions
     --------------------------------------------------------------------------*/
+    /* Python docstring helper */
+    "autoDocstring.docstringFormat": "pep257",
+
+    /* PowerShell */
     "powershell.integratedConsole.showOnStartup": false,
-    "redhat.telemetry.enabled": false,
+
+    /* Lua */
     "Lua.diagnostics.globals": [
         "vim"
     ],
     "Lua.runtime.version": "Lua 5.1",
+
+    "redhat.telemetry.enabled": false,
 }
