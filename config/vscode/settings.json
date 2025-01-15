@@ -101,6 +101,12 @@
                 "workbench.action.openRecent"
             ],
         },
+        {
+            "before": ["<leader>", "s"],
+            "commands": [
+                "workbench.action.files.save"
+            ],
+        },
 
         /* VSCode AI chat */
         {
