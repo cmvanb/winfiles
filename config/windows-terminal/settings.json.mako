@@ -56,11 +56,11 @@
 
         /* Navigation */
         {
-            "command": { "action": "scrollDown", "rowsToScroll": 40 },
+            "command": { "action": "scrollDown", "rowsToScroll": 28 },
             "keys": "ctrl+j"
         },
         {
-            "command": { "action": "scrollUp", "rowsToScroll": 40 },
+            "command": { "action": "scrollUp", "rowsToScroll": 28 },
             "keys": "ctrl+k"
         },
         {
