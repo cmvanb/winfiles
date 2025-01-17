@@ -92,6 +92,14 @@
             ],
         },
 
+        /* Formatting */
+        {
+            "before": [ "<leader>", ";" ],
+            "commands": [
+                "editor.action.formatDocument",
+            ]
+        },
+
         /* VSCode LSP */
         {
             "before": ["g", "r"],

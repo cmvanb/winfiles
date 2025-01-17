@@ -2,7 +2,7 @@
 [
   /* Focus */
   {
-    "key": "alt+esc",
+    "key": "f10",
     "command": "runCommands",
     "args": {
         "commands": [
