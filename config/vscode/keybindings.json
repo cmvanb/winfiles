@@ -91,7 +91,7 @@
             "to": "up",
             "by": "wrappedLine",
             "revealCursor": true,
-            "value": 28
+            "value": 20
         }
     },
     {
@@ -101,7 +101,7 @@
             "to": "down",
             "by": "wrappedLine",
             "revealCursor": true,
-            "value": 28
+            "value": 20
         }
     },
     /* Terminal */
