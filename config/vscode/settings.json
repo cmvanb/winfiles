@@ -92,33 +92,11 @@
             ],
         },
 
-        /* Formatting */
-        {
-            "before": [ "<leader>", ";" ],
-            "commands": [
-                "editor.action.formatDocument",
-            ]
-        },
-
         /* VSCode LSP */
         {
             "before": ["g", "r"],
             "commands": [
                 "references-view.findReferences",
-            ],
-        },
-
-        /* VSCode general */
-        {
-            "before": ["<leader>", "o"],
-            "commands": [
-                "workbench.action.openRecent"
-            ],
-        },
-        {
-            "before": ["<leader>", "s"],
-            "commands": [
-                "workbench.action.files.save"
             ],
         },
 
@@ -131,12 +109,6 @@
         },
 
         /* VSCode search */
-        {
-            "before": ["<leader>", ":"],
-            "commands": [
-                "workbench.action.showCommands"
-            ],
-        },
         {
             "before": ["<leader>", "g"],
             "commands": [
