@@ -216,30 +216,40 @@
         "command": "keybindings.editor.focusKeybindings",
         "when": "inKeybindings && inKeybindingsSearch"
     },
-
     /* Command palette
     --------------------------------------------------------------------------*/
     {
         "key": "ctrl+shift+;",
         "command": "workbench.action.showCommands"
     },
-
-    /* Clear focus
+    /* Escape
     --------------------------------------------------------------------------*/
     {
-        "key": "f10",
+        "key": "escape",
         "command": "runCommands",
         "args": {
             "commands": [
-                { "command": "workbench.action.closePanel" },
-                { "command": "workbench.view.explorer" },
-                { "command": "references-view.clear" },
-                { "command": "search.action.clearSearchResults" },
-                { "command": "workbench.action.focusActiveEditorGroup" }
+                {
+                    "command": "workbench.action.closePanel"
+                },
+                {
+                    "command": "workbench.view.explorer"
+                },
+                {
+                    "command": "references-view.clear"
+                },
+                {
+                    "command": "search.action.clearSearchResults"
+                },
+                {
+                    "command": "workbench.action.focusActiveEditorGroup"
+                },
+                {
+                    "command": "extension.vim_escape"
+                },
             ]
         }
     },
-
     /* Tab management
     --------------------------------------------------------------------------*/
     {
@@ -262,7 +272,6 @@
         "key": "ctrl+w",
         "command": "workbench.action.closeActiveEditor"
     },
-
     /* File management
     --------------------------------------------------------------------------*/
     {
@@ -283,7 +292,6 @@
         "command": "revealFileInOS",
         "when": "!editorFocus"
     },
-
     /* Window/group management
     --------------------------------------------------------------------------*/
     {
@@ -311,7 +319,6 @@
         "key": "f11",
         "command": "workbench.action.toggleFullScreen"
     },
-
     /* Snippet completion
     --------------------------------------------------------------------------*/
     {
@@ -319,7 +326,6 @@
         "command": "insertBestCompletion",
         "when": "atEndOfWord && !hasOtherSuggestions && !inSnippetMode && !suggestWidgetVisible && config.editor.tabCompletion == 'on'"
     },
-
     /* Auto suggestion
     --------------------------------------------------------------------------*/
     {
@@ -343,7 +349,6 @@
         "command": "hideSuggestWidget",
         "when": "suggestWidgetVisible && textInputFocus"
     },
-
     /* Parameter hints
     --------------------------------------------------------------------------*/
     /* TODO: Check keybinding. */
@@ -352,14 +357,17 @@
         "command": "editor.action.triggerParameterHints",
         "when": "editorHasSignatureHelpProvider && editorTextFocus"
     },
-
     /* Formatting
     --------------------------------------------------------------------------*/
+    {
+        "key": ";",
+        "command": "editor.action.formatSelection",
+        "when": "editorTextFocus && vim.active && vim.mode != 'Insert'",
+    },
     {
         "key": "ctrl+;",
         "command": "editor.action.formatDocument"
     },
-
     /* Navigation
     --------------------------------------------------------------------------*/
     {
@@ -382,7 +390,6 @@
             "value": 20
         }
     },
-
     /* Terminal
     --------------------------------------------------------------------------*/
     {
@@ -394,7 +401,6 @@
         "key": "ctrl+shift+t",
         "command": "workbench.action.terminal.openNativeConsole"
     },
-
     /* VSCodeVim
     --------------------------------------------------------------------------*/
     {
@@ -407,7 +413,6 @@
             ]
         }
     },
-
     /* Chat
     --------------------------------------------------------------------------*/
     {
@@ -420,7 +425,6 @@
         "command": "-workbench.action.chat.newChat",
         "when": "chatIsEnabled && inChat && chatLocation != 'editing-session'"
     },
-
     /* Quick fix
     --------------------------------------------------------------------------*/
     /* TODO: Needs a better keybinding. */
@@ -435,7 +439,6 @@
         "command": "editor.action.quickFix",
         "when": "editorHasCodeActionsProvider && textInputFocus && !editorReadonly"
     },
-
     /* Disable VSCodeVIM defaults
     --------------------------------------------------------------------------*/
     {
@@ -443,7 +446,6 @@
         "command": "-extension.vim_ctrl+o",
         "when": "editorTextFocus && vim.active && vim.use<C-o> && !inDebugRepl"
     },
-
     /* Disable all other VSCode defaults
     --------------------------------------------------------------------------*/
     {
@@ -909,7 +911,7 @@
         "command": "-editor.action.moveSelectionToNextFindMatch",
         "when": "editorFocus"
     },
-    /* NOTE: Are these the line swap commands? */ 
+    /* NOTE: Are these the line swap commands? */
     {
         "key": "alt+down",
         "command": "-editor.action.moveLinesDownAction",
@@ -1593,7 +1595,6 @@
         "when": "breadcrumbsActive && breadcrumbsVisible"
     },
     {
-    {
         "key": "ctrl+right",
         "command": "-breadcrumbs.focusNextWithPicker",
         "when": "breadcrumbsActive && breadcrumbsVisible && listFocus && !inputFocus"
@@ -1923,7 +1924,6 @@
         "command": "-deleteWordRight",
         "when": "textInputFocus && !editorReadonly"
     },
-    {
     {
         "key": "ctrl+shift+z",
         "command": "-editor.action.customEditor.redo",
@@ -2267,5 +2267,10 @@
     {
         "key": "ctrl+; ctrl+x",
         "command": "-testing.cancelRun"
+    },
+    {
+        "key": "ctrl+k ctrl+r",
+        "command": "-git.revertSelectedRanges",
+        "when": "isInDiffEditor && !operationInProgress"
     }
 ]
