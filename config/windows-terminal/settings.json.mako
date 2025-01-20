@@ -46,6 +46,10 @@
 
         /* Basic */
         {
+            "command": "copy",
+            "keys": "ctrl+c"
+        },
+        {
             "command": "paste",
             "keys": "ctrl+v"
         },
@@ -81,6 +85,22 @@
             "id": "User.moveFocus.87C324ED",
             "keys": "ctrl+alt+l"
         },
+        {
+            "command":
+            {
+                "action": "moveFocus",
+                "direction": "up"
+            },
+            "keys": "ctrl+alt+k"
+        },
+        {
+            "command":
+            {
+                "action": "moveFocus",
+                "direction": "down"
+            },
+            "keys": "ctrl+alt+j"
+        },
 
         /* Pane management */
         {
@@ -103,6 +123,13 @@
             "id": "User.splitPane.10B260D2",
             "keys": "ctrl+alt+p"
         },
+        {
+            "command": {
+                "action": "sendInput",
+                "input": "\u0003"
+            },
+            "keys": "ctrl+x"
+        }
     ],
 
     /* Profiles
