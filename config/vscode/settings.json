@@ -99,6 +99,10 @@
                 "references-view.findReferences",
             ],
         },
+        {
+            "before": ["g", "h"],
+            "command": "editor.action.triggerParameterHints",
+        },
 
         /* VSCode AI chat */
         {

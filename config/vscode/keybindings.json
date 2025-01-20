@@ -349,14 +349,6 @@
         "command": "hideSuggestWidget",
         "when": "suggestWidgetVisible && textInputFocus"
     },
-    /* Parameter hints
-    --------------------------------------------------------------------------*/
-    /* TODO: Check keybinding. */
-    {
-        "key": "g h",
-        "command": "editor.action.triggerParameterHints",
-        "when": "editorHasSignatureHelpProvider && editorTextFocus"
-    },
     /* Formatting
     --------------------------------------------------------------------------*/
     {
