@@ -61,11 +61,11 @@
         /* Navigation */
         {
             "command": { "action": "scrollDown", "rowsToScroll": 28 },
-            "keys": "ctrl+j"
+            "keys": "pagedown"
         },
         {
             "command": { "action": "scrollUp", "rowsToScroll": 28 },
-            "keys": "ctrl+k"
+            "keys": "pageup"
         },
         {
             "command":
