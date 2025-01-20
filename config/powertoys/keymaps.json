@@ -30,6 +30,18 @@
                 "newRemapKeys": "256"
             },
             {
+                "originalKeys": "91;37",
+                "operationType": 0,
+                "secondKeyOfChord": 0,
+                "newRemapKeys": "164;160;9"
+            },
+            {
+                "originalKeys": "91;39",
+                "operationType": 0,
+                "secondKeyOfChord": 0,
+                "newRemapKeys": "164;9"
+            },
+            {
                 "originalKeys": "91;66",
                 "runProgramElevationLevel": 0,
                 "secondKeyOfChord": 0,
