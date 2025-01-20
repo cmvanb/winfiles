@@ -85,14 +85,14 @@
                 "editor.action.indentLines"
             ],
         },
+
+        /* LSP */
         {
             "before": [ "g", "c" ],
             "commands": [
                 "editor.action.rename",
             ],
         },
-
-        /* VSCode LSP */
         {
             "before": ["g", "r"],
             "commands": [

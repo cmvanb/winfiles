@@ -4,36 +4,6 @@
     --------------------------------------------------------------------------*/
     /* Editing */
     {
-        "key": "up",
-        "command": "cursorUp",
-        "when": "textInputFocus"
-    },
-    {
-        "key": "down",
-        "command": "cursorDown",
-        "when": "textInputFocus"
-    },
-    {
-        "key": "left",
-        "command": "cursorLeft",
-        "when": "textInputFocus"
-    },
-    {
-        "key": "right",
-        "command": "cursorRight",
-        "when": "textInputFocus"
-    },
-    {
-        "key": "home",
-        "command": "cursorHome",
-        "when": "textInputFocus"
-    },
-    {
-        "key": "end",
-        "command": "cursorEnd",
-        "when": "textInputFocus"
-    },
-    {
         "key": "ctrl+oem_2",
         "command": "editor.action.commentLine",
         "when": "editorTextFocus"
@@ -43,6 +13,7 @@
         "command": "editor.action.commentLine",
         "when": "editorTextFocus"
     },
+    /* LSP */
     {
         "key": "f2",
         "command": "editor.action.rename",
@@ -215,6 +186,40 @@
         "key": "down",
         "command": "keybindings.editor.focusKeybindings",
         "when": "inKeybindings && inKeybindingsSearch"
+    },
+    /* Line editing
+        NOTE: These bindings are excluded from vim mode, because they don't
+        translate to proper vim movements, causing issues in selection mode.
+    --------------------------------------------------------------------------*/
+    {
+        "key": "up",
+        "command": "cursorUp",
+        "when": "textInputFocus && !vim.active"
+    },
+    {
+        "key": "down",
+        "command": "cursorDown",
+        "when": "textInputFocus && !vim.active"
+    },
+    {
+        "key": "left",
+        "command": "cursorLeft",
+        "when": "textInputFocus && !vim.active"
+    },
+    {
+        "key": "right",
+        "command": "cursorRight",
+        "when": "textInputFocus && !vim.active"
+    },
+    {
+        "key": "home",
+        "command": "cursorHome",
+        "when": "textInputFocus && !vim.active"
+    },
+    {
+        "key": "end",
+        "command": "cursorEnd",
+        "when": "textInputFocus && !vim.active"
     },
     /* Command palette
     --------------------------------------------------------------------------*/
