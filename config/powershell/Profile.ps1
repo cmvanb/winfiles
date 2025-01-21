@@ -87,6 +87,9 @@ Set-Alias -Force -Option AllScope -Name grb -Value git_rebase
 function git_remote { git remote -v $args }
 Set-Alias -Force -Option AllScope -Name gr -Value git_remote
 
+function git_show { git show $args }
+Set-Alias -Force -Option AllScope -Name gsh -Value git_show
+
 function git_status { git status $args }
 Set-Alias -Force -Option AllScope -Name gs -Value git_status
 
