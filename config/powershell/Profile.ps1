@@ -75,6 +75,9 @@ Set-Alias -Force -Option AllScope -Name gds -Value git_diff_staged
 function git_log { git log --pretty=history $args }
 Set-Alias -Force -Option AllScope -Name gl -Value git_log
 
+function git_pull { git pull --rebase $args }
+Set-Alias -Force -Option AllScope -Name gpu -Value git_pull
+
 function git_push { git push $args }
 Set-Alias -Force -Option AllScope -Name gp -Value git_push
 
