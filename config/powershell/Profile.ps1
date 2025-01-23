@@ -112,6 +112,9 @@ Set-Alias -Force -Option AllScope -Name lst -Value list_tree
 function list_tree_all { eza -alT --color=always --group-directories-first --time-style=long-iso $args }
 Set-Alias -Force -Option AllScope -Name lsta -Value list_tree_all
 
+function msys_shell { msys2_shell.cmd -defterm -here -no-start -msys2 -shell bash }
+Set-Alias -Force -Option AllScope -Name msys -Value msys_shell
+
 function path { Write-Output ($env:Path).Split(';') }
 Set-Alias -Force -Option AllScope -Name p -Value path
 
