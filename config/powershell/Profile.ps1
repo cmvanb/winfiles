@@ -12,6 +12,7 @@ Import-Module -Force "utils\system"
 Import-Module -Force "scripts\print-environment"
 
 # Environment variables
+[System.Environment]::SetEnvironmentVariable('XDG_BIN_HOME', $env:USERPROFILE + '\.local\bin', 'User')
 [System.Environment]::SetEnvironmentVariable('XDG_CACHE_HOME', $env:USERPROFILE + '\.cache', 'User')
 [System.Environment]::SetEnvironmentVariable('XDG_CONFIG_HOME', $env:USERPROFILE + '\.config', 'User')
 [System.Environment]::SetEnvironmentVariable('XDG_DATA_HOME', $env:USERPROFILE + '\.local\share', 'User')
