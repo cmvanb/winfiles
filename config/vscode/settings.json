@@ -88,6 +88,12 @@
             ],
         },
 
+        /* Selection */
+        {
+            "before": ["<C-a>"],
+            "after": ["g", "g", "V", "G"]
+        },
+
         /* LSP */
         {
             "before": [ "g", "c" ],

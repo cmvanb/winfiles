@@ -119,12 +119,6 @@
         "command": "insertPrevSuggestion",
         "when": "hasOtherSuggestions && textInputFocus && !inSnippetMode && !suggestWidgetVisible && config.editor.tabCompletion == 'on'"
     },
-    /* Text selection */
-    {
-        "key": "ctrl+a",
-        "command": "editor.action.selectAll",
-        "when": "textInputFocus"
-    },
     /* File explorer */
     {
         "key": "ctrl+n",
@@ -219,6 +213,13 @@
     {
         "key": "end",
         "command": "cursorEnd",
+        "when": "textInputFocus && !vim.active"
+    },
+    /* Text selection
+    --------------------------------------------------------------------------*/
+    {
+        "key": "ctrl+a",
+        "command": "editor.action.selectAll",
         "when": "textInputFocus && !vim.active"
     },
     /* Command palette
