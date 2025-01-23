@@ -97,6 +97,17 @@ function delete_link($path) {
     print " └> Delete link: ``$path``"
 }
 
+function make_shortcut($path, $target) {
+    if (exists $path) {
+        force_delete $path
+    }
+
+    $ws_shell = New-Object -ComObject WScript.Shell
+    $shortcut = $ws_shell.CreateShortcut("$path")
+    $shortcut.TargetPath = "$target"
+    $shortcut.Save()
+}
+
 function ensure_directory($path) {
     if (-not (exists $path)) {
         [void](New-Item -Path $path -ItemType Directory)
