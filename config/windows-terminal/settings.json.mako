@@ -46,6 +46,10 @@
 
         /* Basic */
         {
+            "command": "newWindow",
+            "keys": "ctrl+t",
+        },
+        {
             "command": "copy",
             "keys": "ctrl+c"
         },
@@ -102,6 +106,34 @@
             "keys": "ctrl+alt+j"
         },
 
+        /* Tab management */
+        {
+            "command": "closeTab",
+            "keys": "ctrl+w"
+        },
+        {
+            "command": "prevTab",
+            "keys": "ctrl+h"
+        },
+        {
+            "command": "nextTab",
+            "keys": "ctrl+l"
+        },
+        {
+            "command": {
+                "action": "moveTab",
+                "direction": "backward",
+            },
+            "keys": "ctrl+shift+h"
+        },
+        {
+            "command": {
+                "action": "moveTab",
+                "direction": "forward",
+            },
+            "keys": "ctrl+shift+l"
+        },
+
         /* Pane management */
         {
             "command":
@@ -123,6 +155,8 @@
             "id": "User.splitPane.10B260D2",
             "keys": "ctrl+alt+p"
         },
+
+        /* Passthrough */
         {
             "command": {
                 "action": "sendInput",
@@ -171,6 +205,12 @@
                 "hidden": false,
                 "name": "PowerShell 7",
                 "source": "Windows.Terminal.PowershellCore"
+            },
+            {
+                "commandline": "wsl.exe ~",
+                "guid": "{07b52e3e-de2c-5db4-bd2d-ba144ed6c273}",
+                "hidden": false,
+                "name": "WSL",
             }
         ]
     },
