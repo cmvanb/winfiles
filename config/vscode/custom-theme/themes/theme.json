@@ -146,7 +146,7 @@
         /* Editor find highlighting */
         "editor.findMatchBackground": "#ff0066",
         "editor.findMatchForeground": "#0b0b0e",
-        "editor.findMatchHighlightBackground": "#00cc7a",
+        "editor.findMatchHighlightBackground": "#00663d",
         "editor.findMatchHighlightForeground": "#0b0b0e",
         "editor.rangeHighlightBackground": "#ff006640",
 

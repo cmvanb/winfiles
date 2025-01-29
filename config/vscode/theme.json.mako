@@ -147,7 +147,7 @@
         /* Editor find highlighting */
         "editor.findMatchBackground": "${color_hash('magenta_5')}",
         "editor.findMatchForeground": "${color_hash('gray_0')}",
-        "editor.findMatchHighlightBackground": "${color_hash('green_4')}",
+        "editor.findMatchHighlightBackground": "${color_hash('green_2')}",
         "editor.findMatchHighlightForeground": "${color_hash('gray_0')}",
         "editor.rangeHighlightBackground": "${color_hash('magenta_5')}40",
 
