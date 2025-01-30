@@ -360,7 +360,7 @@
     {
         "key": ";",
         "command": "editor.action.formatSelection",
-        "when": "editorTextFocus && vim.active && vim.mode != 'Insert'",
+        "when": "editorTextFocus && vim.active && ( vim.mode == 'Visual' || vim.mode == 'VisualLine' || vim.mode == 'VisualBlock' )",
     },
     {
         "key": "ctrl+;",
