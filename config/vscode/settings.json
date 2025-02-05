@@ -134,7 +134,7 @@
             ],
         },
         {
-            "before": ["<leader>", "l"],
+            "before": ["<C-y>"],
             "commands": [
                 ":noh",
                 "references-view.clear",
