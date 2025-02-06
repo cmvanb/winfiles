@@ -149,6 +149,7 @@ function Invoke-Starship-PreCommand {
 # Invoke-Expression "$(direnv hook pwsh)"
 
 Invoke-Expression (&starship init powershell)
+Invoke-Expression (& { (zoxide init powershell | Out-String) })
 
 # Startup
 #-------------------------------------------------------------------------------
