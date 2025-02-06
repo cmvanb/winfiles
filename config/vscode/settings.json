@@ -2,6 +2,7 @@
     /* General settings
     --------------------------------------------------------------------------*/
     "window.openFoldersInNewWindow": "on",
+    "extensions.ignoreRecommendations": true,
 
     /* UI visibility
     --------------------------------------------------------------------------*/
