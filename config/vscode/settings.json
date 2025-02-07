@@ -204,7 +204,7 @@
     /* Other extensions
     --------------------------------------------------------------------------*/
     /* Python docstring helper */
-    "autoDocstring.docstringFormat": "pep257",
+    "autoDocstring.docstringFormat": "sphinx-notypes",
 
     /* PowerShell */
     "powershell.integratedConsole.showOnStartup": false,
