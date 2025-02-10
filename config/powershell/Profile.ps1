@@ -126,6 +126,11 @@ Set-Alias -Force -Option AllScope -Name type -Value Get-Command
 function virtual_env_enable { .\venv\Scripts\Activate.ps1 }
 Set-Alias -Force -Option AllScope -Name va -Value virtual_env_enable
 
+# Key bindings
+#-------------------------------------------------------------------------------
+
+Set-PSReadLineKeyHandler -Chord Ctrl+y -Function ClearScreen
+
 # Prompt
 #-------------------------------------------------------------------------------
 
