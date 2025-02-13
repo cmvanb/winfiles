@@ -352,8 +352,18 @@
     },
     {
         "key": "escape",
-        "command": "hideSuggestWidget",
-        "when": "suggestWidgetVisible && textInputFocus"
+        "when": "suggestWidgetVisible && textInputFocus",
+        "command": "runCommands",
+        "args": {
+            "commands": [
+                {
+                    "command": "hideSuggestWidget"
+                },
+                {
+                    "command": "extension.vim_escape"
+                },
+            ]
+        }
     },
     /* Formatting
     --------------------------------------------------------------------------*/
