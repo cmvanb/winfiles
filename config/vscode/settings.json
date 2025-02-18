@@ -9,6 +9,7 @@
     "window.customTitleBarVisibility": "windowed",
     "breadcrumbs.enabled": false,
     "workbench.activityBar.location": "hidden",
+    "editor.minimap.enabled": false,
 
     /* Editor
     --------------------------------------------------------------------------*/
@@ -227,5 +228,4 @@
     "Lua.runtime.version": "Lua 5.1",
 
     "redhat.telemetry.enabled": false,
-    "editor.minimap.enabled": false,
 }
