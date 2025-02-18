@@ -320,6 +320,14 @@
         "key": "ctrl+alt+w",
         "command": "workbench.action.closeGroup"
     },
+    {
+        "key": "ctrl+alt+s",
+        "command": "workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "ctrl+alt+g",
+        "command": "workbench.action.toggleAuxiliaryBar"
+    },
     /* NOTE: Needed for PowerToys remapping. */
     {
         "key": "f11",
