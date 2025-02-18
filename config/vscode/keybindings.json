@@ -325,6 +325,23 @@
         "key": "ctrl+alt+g",
         "command": "workbench.action.toggleAuxiliaryBar"
     },
+    {
+        "key": "ctrl+alt+y",
+        "command": "runCommands",
+        "args": {
+            "commands": [
+                {
+                    "command": "workbench.action.closeSidebar"
+                },
+                {
+                    "command": "workbench.action.closeAuxiliaryBar"
+                },
+                {
+                    "command": "extension.vim_escape"
+                },
+            ]
+        }
+    },
     /* NOTE: Needed for PowerToys remapping. */
     {
         "key": "f11",
