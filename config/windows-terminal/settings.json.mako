@@ -136,6 +136,10 @@
 
         /* Pane management */
         {
+            "command": "closePane",
+            "keys": "ctrl+alt+w"
+        },
+        {
             "command":
             {
                 "action": "splitPane",
