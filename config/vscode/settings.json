@@ -88,6 +88,18 @@
                 "editor.action.indentLines"
             ],
         },
+        {
+            "before": ["J"],
+            "commands": [
+                "editor.action.moveLinesDownAction"
+            ],
+        },
+        {
+            "before": ["K"],
+            "commands": [
+                "editor.action.moveLinesUpAction"
+            ],
+        },
 
         /* Selection */
         {
@@ -216,4 +228,5 @@
     "Lua.runtime.version": "Lua 5.1",
 
     "redhat.telemetry.enabled": false,
+    "editor.minimap.enabled": false,
 }
