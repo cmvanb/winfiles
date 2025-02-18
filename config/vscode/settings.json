@@ -152,7 +152,6 @@
                 ":noh",
                 "references-view.clear",
                 "search.action.clearSearchResults",
-                "workbench.view.explorer",
                 "workbench.action.focusActiveEditorGroup",
             ],
         },
