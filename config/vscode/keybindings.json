@@ -257,6 +257,9 @@
                 {
                     "command": "workbench.action.closeAuxiliaryBar"
                 },
+                {
+                    "command": "cancelRenameInput"
+                }
             ]
         }
     },
