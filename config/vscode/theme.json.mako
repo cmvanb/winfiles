@@ -364,13 +364,12 @@
             }
         },
         {
-            "name": "String, Symbols, Inherited Class, Markup Heading",
+            "name": "String, Symbols, Inherited Class",
             "scope": [
                 "string",
                 "constant.other.symbol",
                 "constant.other.key",
                 "entity.other.inherited-class",
-                "markup.heading",
                 "markup.inserted.git_gutter",
                 "meta.group.braces.curly constant.other.object.key.js string.unquoted.label.js"
             ],
@@ -624,8 +623,11 @@
         {
             "name": "Markdown - Heading",
             "scope": [
+                "entity.name.section.markdown",
                 "markdown.heading",
+                "markup.heading",
                 "markup.heading | markup.heading entity.name",
+                "markup.heading.markdown",
                 "markup.heading.markdown punctuation.definition.heading.markdown"
             ],
             "settings": {
@@ -650,7 +652,7 @@
             ],
             "settings": {
                 "fontStyle": "bold",
-                "foreground": "${color_hash('debug')}"
+                "foreground": "${color_hash('secondary_10')}"
             }
         },
         {
@@ -675,7 +677,6 @@
             ],
             "settings": {
                 "fontStyle": "underline",
-                "foreground": "${color_hash('debug')}"
             }
         },
         {
@@ -702,7 +703,7 @@
                 "string.other.link.title.markdown"
             ],
             "settings": {
-                "foreground": "${color_hash('debug')}"
+                "foreground": "${color_hash('primary_12')}"
             }
         },
         {
@@ -711,16 +712,17 @@
                 "string.other.link.description.title.markdown"
             ],
             "settings": {
-                "foreground": "${color_hash('debug')}"
+                "foreground": "${color_hash('primary_15')}"
             }
         },
         {
             "name": "Markdown - Link Anchor",
             "scope": [
+                "markup.underline.link.markdown",
                 "constant.other.reference.link.markdown"
             ],
             "settings": {
-                "foreground": "${color_hash('debug')}"
+                "foreground": "${color_hash('primary_15')}"
             }
         },
         {
@@ -777,7 +779,7 @@
             ],
             "settings": {
                 "fontStyle": "bold",
-                "foreground": "${color_hash('debug')}"
+                "foreground": "${color_hash('text_10')}"
             }
         },
         {

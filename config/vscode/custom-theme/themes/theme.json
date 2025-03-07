@@ -363,13 +363,12 @@
             }
         },
         {
-            "name": "String, Symbols, Inherited Class, Markup Heading",
+            "name": "String, Symbols, Inherited Class",
             "scope": [
                 "string",
                 "constant.other.symbol",
                 "constant.other.key",
                 "entity.other.inherited-class",
-                "markup.heading",
                 "markup.inserted.git_gutter",
                 "meta.group.braces.curly constant.other.object.key.js string.unquoted.label.js"
             ],
@@ -623,8 +622,11 @@
         {
             "name": "Markdown - Heading",
             "scope": [
+                "entity.name.section.markdown",
                 "markdown.heading",
+                "markup.heading",
                 "markup.heading | markup.heading entity.name",
+                "markup.heading.markdown",
                 "markup.heading.markdown punctuation.definition.heading.markdown"
             ],
             "settings": {
@@ -649,7 +651,7 @@
             ],
             "settings": {
                 "fontStyle": "bold",
-                "foreground": "#ff00ff"
+                "foreground": "#0b7b93"
             }
         },
         {
@@ -674,7 +676,6 @@
             ],
             "settings": {
                 "fontStyle": "underline",
-                "foreground": "#ff00ff"
             }
         },
         {
@@ -701,7 +702,7 @@
                 "string.other.link.title.markdown"
             ],
             "settings": {
-                "foreground": "#ff00ff"
+                "foreground": "#057cd3"
             }
         },
         {
@@ -710,16 +711,17 @@
                 "string.other.link.description.title.markdown"
             ],
             "settings": {
-                "foreground": "#ff00ff"
+                "foreground": "#05aaff"
             }
         },
         {
             "name": "Markdown - Link Anchor",
             "scope": [
+                "markup.underline.link.markdown",
                 "constant.other.reference.link.markdown"
             ],
             "settings": {
-                "foreground": "#ff00ff"
+                "foreground": "#05aaff"
             }
         },
         {
@@ -776,7 +778,7 @@
             ],
             "settings": {
                 "fontStyle": "bold",
-                "foreground": "#ff00ff"
+                "foreground": "#94a4b4"
             }
         },
         {
