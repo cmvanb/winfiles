@@ -209,6 +209,6 @@ colors:
 fonts:
 #-------------------------------------------------------------------------------
 
-  mono: "Iosevka NF"
+  mono: "Iosevka NFM"
   sans: "Calibri"
   serif: "Georgia"
