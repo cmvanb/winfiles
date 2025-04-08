@@ -186,7 +186,7 @@
             {
                 "face": "IosevkaTerm NFM"
             },
-            "historySize": 10000,
+            "historySize": 100000,
             "intenseTextStyle": "bold"
         },
         "list":
