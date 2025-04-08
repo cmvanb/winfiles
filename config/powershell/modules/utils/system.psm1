@@ -26,4 +26,8 @@ function unset_registry_key($key, $name) {
     Remove-ItemProperty -Path $key -Name $name
 }
 
+function set_env_var($name, $value) {
+    Set-ItemProperty -Path HKCU:\Environment -Name $name -Value $value
+}
+
 Export-ModuleMember -Function *

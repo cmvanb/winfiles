@@ -12,13 +12,13 @@ Import-Module -Force "utils\system"
 Import-Module -Force "scripts\print-environment"
 
 # Environment variables
-[System.Environment]::SetEnvironmentVariable('XDG_BIN_HOME', $env:USERPROFILE + '\.local\bin', 'User')
-[System.Environment]::SetEnvironmentVariable('XDG_CACHE_HOME', $env:USERPROFILE + '\.cache', 'User')
-[System.Environment]::SetEnvironmentVariable('XDG_CONFIG_HOME', $env:USERPROFILE + '\.config', 'User')
-[System.Environment]::SetEnvironmentVariable('XDG_DATA_HOME', $env:USERPROFILE + '\.local\share', 'User')
-[System.Environment]::SetEnvironmentVariable('XDG_SCRIPTS_HOME', $env:USERPROFILE + '\.local\scripts', 'User')
-[System.Environment]::SetEnvironmentVariable('PYTHONPYCACHEPREFIX', $env:USERPROFILE + '\.cache\python', 'User')
-[System.Environment]::SetEnvironmentVariable('STARSHIP_CONFIG', $env:USERPROFILE + '\.config\starship\starship.toml', 'User')
+set_env_var 'XDG_BIN_HOME' "$env:USERPROFILE\.local\bin"
+set_env_var 'XDG_CACHE_HOME' "$env:USERPROFILE\.cache"
+set_env_var 'XDG_CONFIG_HOME' "$env:USERPROFILE\.config"
+set_env_var 'XDG_DATA_HOME' "$env:USERPROFILE\.local\share"
+set_env_var 'XDG_SCRIPTS_HOME' "$env:USERPROFILE\.local\scripts"
+set_env_var 'PYTHONPYCACHEPREFIX' "$env:USERPROFILE\.cache\python"
+set_env_var 'STARSHIP_CONFIG' "$env:USERPROFILE\.config\starship\starship.toml"
 
 # XDG directories
 ensure_directory $env:XDG_CACHE_HOME
