@@ -19,7 +19,7 @@
     --------------------------------------------------------------------------*/
     "editor.bracketPairColorization.enabled": false,
     "editor.cursorBlinking": "solid",
-	"editor.fontFamily": "IosevkaTerm NF, Consolas, 'Courier New', monospace",
+	"editor.fontFamily": "IosevkaTerm NFM, Consolas, 'Courier New', monospace",
 	"editor.fontSize": 14,
     "editor.rulers": [
         80,

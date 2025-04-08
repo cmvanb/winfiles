@@ -184,7 +184,7 @@
             "experimental.retroTerminalEffect": false,
             "font":
             {
-                "face": "IosevkaTerm Nerd Font"
+                "face": "IosevkaTerm NFM"
             },
             "historySize": 10000,
             "intenseTextStyle": "bold"
