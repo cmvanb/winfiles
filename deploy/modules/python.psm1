@@ -10,10 +10,9 @@ Import-Module "utils/system" -Force
 function deploy {
     print "└> Installing python modules."
 
-    python -m pip install --upgrade pip
-    python -m pip install "$base_dir\config\python\color"
-    python -m pip install "$base_dir\config\python\template"
-    python -m pip install "$base_dir\config\python\theme"
+    python -m pip install --break-system-packages "$base_dir\config\python\color"
+    python -m pip install --break-system-packages "$base_dir\config\python\template"
+    python -m pip install --break-system-packages "$base_dir\config\python\theme"
 }
 
 function undeploy {
