@@ -9,6 +9,7 @@ scoop bucket add nerd-fonts
 
 scoop install autohotkey
 scoop install bat
+scoop install delta
 scoop install eza
 scoop install git
 scoop install IosevkaTerm-NF-Mono
@@ -18,5 +19,6 @@ scoop install less
 scoop install neovim
 scoop install ripgrep
 scoop install starship
-scoop install vscode
+scoop install uv
+# scoop install vscode
 scoop install zoxide
