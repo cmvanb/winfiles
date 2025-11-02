@@ -155,6 +155,7 @@ function Invoke-Starship-PreCommand {
 
 Invoke-Expression (&starship init powershell)
 Invoke-Expression (& { (zoxide init powershell | Out-String) })
+Invoke-Expression (& { (fnm env --use-on-cd | Out-String) })
 
 # Startup
 #-------------------------------------------------------------------------------
