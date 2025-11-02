@@ -11,6 +11,7 @@ scoop install autohotkey
 scoop install bat
 scoop install delta
 scoop install eza
+scoop install fnm
 scoop install git
 scoop install IosevkaTerm-NF-Mono
 # TODO: Install keymapper manually, scoop package isn't working properly.
@@ -22,3 +23,5 @@ scoop install starship
 scoop install uv
 # scoop install vscode
 scoop install zoxide
+
+fnm install "v25.1.0"
