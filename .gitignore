@@ -9,3 +9,6 @@ venv
 # Python build artifacts
 **/build
 *.egg-info
+
+# Python version management (pyenv/uv)
+.python-version
