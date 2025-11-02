@@ -209,6 +209,6 @@ colors:
 fonts:
 #-------------------------------------------------------------------------------
 
-  mono: "Iosevka NFM"
+  mono: "Iosevka Nerd Font Mono"
   sans: "Calibri"
   serif: "Georgia"
