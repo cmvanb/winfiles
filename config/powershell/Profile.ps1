@@ -19,6 +19,7 @@ set_env_var 'XDG_DATA_HOME' "$env:USERPROFILE\.local\share"
 set_env_var 'XDG_SCRIPTS_HOME' "$env:USERPROFILE\.local\scripts"
 set_env_var 'PYTHONPYCACHEPREFIX' "$env:USERPROFILE\.cache\python"
 set_env_var 'STARSHIP_CONFIG' "$env:USERPROFILE\.config\starship\starship.toml"
+set_env_var 'SSH_AUTH_SOCK' "\\.\pipe\openssh-ssh-agent"
 
 # XDG directories
 ensure_directory $env:XDG_CACHE_HOME
