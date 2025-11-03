@@ -22,6 +22,7 @@ scoop install ripgrep
 scoop install starship
 scoop install uv
 # scoop install vscode
+scoop install zig
 scoop install zoxide
 
 fnm install "v25.1.0"
