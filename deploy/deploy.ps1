@@ -16,7 +16,7 @@ Import-Module "$base_dir\deploy\modules\bat" -Force -Prefix bat_
 Import-Module "$base_dir\deploy\modules\eza" -Force -Prefix eza_
 Import-Module "$base_dir\deploy\modules\git" -Force -Prefix git_
 Import-Module "$base_dir\deploy\modules\less" -Force -Prefix less_
-# Import-Module "$base_dir\deploy\modules\keymapper" -Force -Prefix keymapper_
+Import-Module "$base_dir\deploy\modules\keymapper" -Force -Prefix keymapper_
 Import-Module "$base_dir\deploy\modules\nvim" -Force -Prefix nvim_
 Import-Module "$base_dir\deploy\modules\powershell" -Force -Prefix ps_
 # Import-Module "$base_dir\deploy\modules\powertoys" -Force -Prefix powertoys_
@@ -48,7 +48,7 @@ bat_deploy
 eza_deploy
 git_deploy
 less_deploy
-# keymapper_deploy
+keymapper_deploy
 nvim_deploy
 # powertoys_deploy
 scripts_deploy
