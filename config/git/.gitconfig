@@ -4,6 +4,7 @@
 
 [core]
 	autocrlf = true
+	sshcommand = 'C:/Windows/System32/OpenSSH/ssh.exe'
 	editor = nvim
     pager = delta
 
