@@ -28,17 +28,17 @@ class Color():
     def __str__(self):
         return self.as_hex()
 
-    def as_hex(self):
+    def as_hex(self) -> str:
         return self.hex
 
-    def as_css_rgba(self, alpha):
+    def as_css_rgba(self, alpha: float) -> str:
         return f'rgba({self.r}, {self.g}, {self.b}, {alpha})'
 
-    def as_rgb_int(self):
+    def as_rgb_int(self) -> str:
         return f'{self.r},{self.g},{self.b}'
 
-    def with_hash(self):
+    def with_hash(self) -> str:
         return f'#{self.hex}'
 
-    def with_zerox(self):
-        return f'Ox{self.hex}'
+    def with_zerox(self) -> str:
+        return f'0x{self.hex}'

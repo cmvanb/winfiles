@@ -1,5 +1,6 @@
 #-------------------------------------------------------------------------------
 # Carbon Dark
+# https://cssgradient.io/
 #-------------------------------------------------------------------------------
 
 
@@ -10,16 +11,16 @@ colors:
   debug: &debug "#ff00ff"
 
   # Primary (16-31)
-  primary_0: &primary_0 "#000610"
-  primary_1: &primary_1 "#000d1e"
-  primary_2: &primary_2 "#00152d"
-  primary_3: &primary_3 "#011d3c"
-  primary_4: &primary_4 "#01244b"
-  primary_5: &primary_5 "#022c5a"
-  primary_6: &primary_6 "#023469"
-  primary_7: &primary_7 "#023b78"
-  primary_8: &primary_8 "#034387"
-  primary_9: &primary_9 "#034b96"
+  primary_0:  &primary_0  "#000610"
+  primary_1:  &primary_1  "#000d1e"
+  primary_2:  &primary_2  "#00152d"
+  primary_3:  &primary_3  "#011d3c"
+  primary_4:  &primary_4  "#01244b"
+  primary_5:  &primary_5  "#022c5a"
+  primary_6:  &primary_6  "#023469"
+  primary_7:  &primary_7  "#023b78"
+  primary_8:  &primary_8  "#034387"
+  primary_9:  &primary_9  "#034b96"
   primary_10: &primary_10 "#055eb5"
   primary_11: &primary_11 "#056dc4"
   primary_12: &primary_12 "#057cd3"
@@ -28,16 +29,16 @@ colors:
   primary_15: &primary_15 "#05aaff"
 
   # Secondary (32-47)
-  secondary_0: &secondary_0 "#000e14"
-  secondary_1: &secondary_1 "#02151d"
-  secondary_2: &secondary_2 "#041d27"
-  secondary_3: &secondary_3 "#062431"
-  secondary_4: &secondary_4 "#082c3b"
-  secondary_5: &secondary_5 "#0a3344"
-  secondary_6: &secondary_6 "#0c3b4e"
-  secondary_7: &secondary_7 "#0e4e65"
-  secondary_8: &secondary_8 "#0d5d74"
-  secondary_9: &secondary_9 "#0c6c84"
+  secondary_0:  &secondary_0  "#000e14"
+  secondary_1:  &secondary_1  "#02151d"
+  secondary_2:  &secondary_2  "#041d27"
+  secondary_3:  &secondary_3  "#062431"
+  secondary_4:  &secondary_4  "#082c3b"
+  secondary_5:  &secondary_5  "#0a3344"
+  secondary_6:  &secondary_6  "#0c3b4e"
+  secondary_7:  &secondary_7  "#0e4e65"
+  secondary_8:  &secondary_8  "#0d5d74"
+  secondary_9:  &secondary_9  "#0c6c84"
   secondary_10: &secondary_10 "#0b7b93"
   secondary_11: &secondary_11 "#0a8aa2"
   secondary_12: &secondary_12 "#0999b1"
@@ -46,16 +47,16 @@ colors:
   secondary_15: &secondary_15 "#06c6df"
 
   # Text (48-63)
-  text_0: &text_0 "#001020"
-  text_1: &text_1 "#0e1e2e"
-  text_2: &text_2 "#1d2d3d"
-  text_3: &text_3 "#2c3c4c"
-  text_4: &text_4 "#3b4b5b"
-  text_5: &text_5 "#4a5a6a"
-  text_6: &text_6 "#596979"
-  text_7: &text_7 "#687888"
-  text_8: &text_8 "#768696"
-  text_9: &text_9 "#8595a5"
+  text_0:  &text_0  "#001020"
+  text_1:  &text_1  "#0e1e2e"
+  text_2:  &text_2  "#1d2d3d"
+  text_3:  &text_3  "#2c3c4c"
+  text_4:  &text_4  "#3b4b5b"
+  text_5:  &text_5  "#4a5a6a"
+  text_6:  &text_6  "#596979"
+  text_7:  &text_7  "#687888"
+  text_8:  &text_8  "#768696"
+  text_9:  &text_9  "#8595a5"
   text_10: &text_10 "#94a4b4"
   text_11: &text_11 "#a3b3c3"
   text_12: &text_12 "#b2c2d2"
@@ -64,16 +65,16 @@ colors:
   text_15: &text_15 "#dfefff"
 
   # Gray (64-79)
-  gray_0: &gray_0 "#0b0b0e"
-  gray_1: &gray_1 "#191a20"
-  gray_2: &gray_2 "#282932"
-  gray_3: &gray_3 "#363844"
-  gray_4: &gray_4 "#454757"
-  gray_5: &gray_5 "#535669"
-  gray_6: &gray_6 "#62657b"
-  gray_7: &gray_7 "#71758e"
-  gray_8: &gray_8 "#71758e"
-  gray_9: &gray_9 "#83869c"
+  gray_0:  &gray_0  "#0b0b0e"
+  gray_1:  &gray_1  "#191a20"
+  gray_2:  &gray_2  "#282932"
+  gray_3:  &gray_3  "#363844"
+  gray_4:  &gray_4  "#454757"
+  gray_5:  &gray_5  "#535669"
+  gray_6:  &gray_6  "#62657b"
+  gray_7:  &gray_7  "#71758e"
+  gray_8:  &gray_8  "#71758e"
+  gray_9:  &gray_9  "#83869c"
   gray_10: &gray_10 "#9598ab"
   gray_11: &gray_11 "#a7aab9"
   gray_12: &gray_12 "#babbc8"
@@ -177,38 +178,46 @@ colors:
   magenta_8: &magenta_8 "#ff99c2"
   magenta_9: &magenta_9 "#ffcce0"
 
+  # 16 indexed colors
+  i0:  *gray_0
+  i1:  *red_4
+  i2:  *green_3
+  i3:  *orange_6
+  i4:  *primary_11
+  i5:  *magenta_4
+  i6:  *secondary_10
+  i7:  *text_13
+  i8:  *text_8
+  i9:  *red_6
+  i10: *green_5
+  i11: *yellow_6
+  i12: *primary_15
+  i13: *magenta_6
+  i14: *secondary_15
+  i15: *text_15
+
   # ANSI named shortcuts
-  ansi_black: *gray_0
-  ansi_red: *red_4
-  ansi_green: *green_3
-  ansi_yellow: *orange_6
-  ansi_blue: *primary_10
-  ansi_magenta: *magenta_4
-  ansi_cyan: *secondary_10
-  ansi_white: *text_13
-  ansi_brblack: *text_8
-  ansi_brred: *red_6
-  ansi_brgreen: *green_5
-  ansi_bryellow: *yellow_6
-  ansi_brblue: *primary_15
+  ansi_black:     *gray_0
+  ansi_red:       *red_4
+  ansi_green:     *green_3
+  ansi_yellow:    *orange_6
+  ansi_blue:      *primary_11
+  ansi_magenta:   *magenta_4
+  ansi_cyan:      *secondary_10
+  ansi_white:     *text_13
+  ansi_brblack:   *text_8
+  ansi_brred:     *red_6
+  ansi_brgreen:   *green_5
+  ansi_bryellow:  *yellow_6
+  ansi_brblue:    *primary_15
   ansi_brmagenta: *magenta_6
-  ansi_brcyan: *secondary_15
-  ansi_brwhite: *text_15
+  ansi_brcyan:    *secondary_15
+  ansi_brwhite:   *text_15
 
   # Themed
-  system_bg: *gray_0
-  system_text: *text_13
-
-  terminal_bg: *gray_0
-  terminal_text: *text_13
-
-  editor_bg: *gray_0
+  system_bg:          *gray_0
+  system_text:        *text_13
+  terminal_bg:        *gray_0
+  terminal_text:      *text_13
+  editor_bg:          *gray_0
   editor_text_normal: *secondary_9
-
-
-fonts:
-#-------------------------------------------------------------------------------
-
-  mono: "Iosevka Nerd Font Mono"
-  sans: "Calibri"
-  serif: "Georgia"

@@ -11,6 +11,8 @@ Import-Module "utils\system" -Force
 function deploy {
     print "└> Installing neovim configuration."
 
+    & git -C $base_dir submodule update --recursive --remote
+
     link_or_copy `
         -source "$base_dir\config\nvim\" `
         -destination "$env:USERPROFILE\.config\nvim\"
