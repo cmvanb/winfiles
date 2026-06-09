@@ -7,26 +7,24 @@
 #-------------------------------------------------------------------------------
 
 # Imports
-Import-Module -Force "utils\fs"
-Import-Module -Force "utils\system"
 Import-Module -Force "scripts\print-environment"
 
 # Environment variables
-set_env_var 'XDG_BIN_HOME' "$env:USERPROFILE\.local\bin"
-set_env_var 'XDG_CACHE_HOME' "$env:USERPROFILE\.cache"
-set_env_var 'XDG_CONFIG_HOME' "$env:USERPROFILE\.config"
-set_env_var 'XDG_DATA_HOME' "$env:USERPROFILE\.local\share"
-set_env_var 'XDG_SCRIPTS_HOME' "$env:USERPROFILE\.local\scripts"
-set_env_var 'PYTHONPYCACHEPREFIX' "$env:USERPROFILE\.cache\python"
-set_env_var 'STARSHIP_CONFIG' "$env:USERPROFILE\.config\starship\starship.toml"
-set_env_var 'SSH_AUTH_SOCK' "\\.\pipe\openssh-ssh-agent"
-set_env_var 'PATH' "$env:USERPROFILE\.local\bin;$env:PATH"
+Set-ItemProperty -Path HKCU:\Environment -Name 'XDG_BIN_HOME'     -Value "$env:USERPROFILE\.local\bin"
+Set-ItemProperty -Path HKCU:\Environment -Name 'XDG_CACHE_HOME'   -Value "$env:USERPROFILE\.local\cache"
+Set-ItemProperty -Path HKCU:\Environment -Name 'XDG_CONFIG_HOME'  -Value "$env:USERPROFILE\.config"
+Set-ItemProperty -Path HKCU:\Environment -Name 'XDG_DATA_HOME'    -Value "$env:USERPROFILE\.local\share"
+Set-ItemProperty -Path HKCU:\Environment -Name 'XDG_SCRIPTS_HOME' -Value "$env:USERPROFILE\.local\scripts"
+Set-ItemProperty -Path HKCU:\Environment -Name 'PYTHONPYCACHEPREFIX' -Value "$env:USERPROFILE\.local\cache\python"
+Set-ItemProperty -Path HKCU:\Environment -Name 'STARSHIP_CONFIG'  -Value "$env:USERPROFILE\.config\starship\starship.toml"
+Set-ItemProperty -Path HKCU:\Environment -Name 'SSH_AUTH_SOCK'    -Value "\\.\pipe\openssh-ssh-agent"
+Set-ItemProperty -Path HKCU:\Environment -Name 'PATH'             -Value "$env:USERPROFILE\.local\bin;$env:PATH"
 
 # XDG directories
-ensure_directory $env:XDG_CACHE_HOME
-ensure_directory $env:XDG_CONFIG_HOME
-ensure_directory $env:XDG_DATA_HOME
-ensure_directory $env:XDG_SCRIPTS_HOME
+if (-not (Test-Path $env:XDG_CACHE_HOME))   { [void](New-Item -Path $env:XDG_CACHE_HOME   -ItemType Directory) }
+if (-not (Test-Path $env:XDG_CONFIG_HOME))  { [void](New-Item -Path $env:XDG_CONFIG_HOME  -ItemType Directory) }
+if (-not (Test-Path $env:XDG_DATA_HOME))    { [void](New-Item -Path $env:XDG_DATA_HOME    -ItemType Directory) }
+if (-not (Test-Path $env:XDG_SCRIPTS_HOME)) { [void](New-Item -Path $env:XDG_SCRIPTS_HOME -ItemType Directory) }
 
 # Functions
 #-------------------------------------------------------------------------------
