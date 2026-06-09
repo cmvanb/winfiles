@@ -1,0 +1,5 @@
+profile.extends=
+
+modules.lib=lib-python-utils lib-theme
+modules.theme=theme-base
+modules.install=alacritty bat eza git keymapper less nvim powershell powertoys scripts starship vscode windows-terminal
