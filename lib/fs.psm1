@@ -2,7 +2,7 @@
 # Filesystem utilities
 #-------------------------------------------------------------------------------
 
-Import-Module "utils\system" -Force
+Import-Module "$PSScriptRoot\system.psm1" -Force
 
 
 function exists([string]$path) {

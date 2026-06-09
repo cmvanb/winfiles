@@ -2,7 +2,7 @@
 # Template utilities
 #-------------------------------------------------------------------------------
 
-Import-Module "utils\fs" -Force
+Import-Module "$PSScriptRoot\fs.psm1" -Force
 
 
 function render_mako_template($template, $target) {
