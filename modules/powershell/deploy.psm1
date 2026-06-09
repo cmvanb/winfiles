@@ -20,6 +20,9 @@ function install {
     link_or_copy `
         -source "$src\Profile.ps1" `
         -destination "$env:USERPROFILE\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1"
+    link_or_copy `
+        -source "$src\Aliases.ps1" `
+        -destination "$env:USERPROFILE\Documents\WindowsPowerShell\Aliases.ps1"
 
     # Powershell 7
     link_or_copy `
@@ -28,6 +31,9 @@ function install {
     link_or_copy `
         -source "$src\Profile.ps1" `
         -destination "$env:USERPROFILE\Documents\PowerShell\Microsoft.PowerShell_profile.ps1"
+    link_or_copy `
+        -source "$src\Aliases.ps1" `
+        -destination "$env:USERPROFILE\Documents\PowerShell\Aliases.ps1"
 }
 
 function uninstall {
