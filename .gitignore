@@ -12,3 +12,6 @@ venv
 
 # Python version management (pyenv/uv)
 .python-version
+
+# Rendered template outputs
+modules/vscode/src/custom-theme/themes/theme.json
