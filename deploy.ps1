@@ -47,15 +47,15 @@ function _install_profile([string]$profile_name) {
 
     Write-Host "Installing profile '$profile_name'..."
 
-    foreach ($name in $merged.lib) {
+    foreach ($name in @($merged.lib)) {
         if ($DryRun) { Write-Host "  [dry-run] $name"; continue }
         _run_module $name 'install'
     }
-    foreach ($name in $merged.theme) {
+    foreach ($name in @($merged.theme)) {
         if ($DryRun) { Write-Host "  [dry-run] $name"; continue }
         _run_module $name 'install'
     }
-    foreach ($name in $merged.install) {
+    foreach ($name in @($merged.install)) {
         if ($DryRun) { Write-Host "  [dry-run] $name"; continue }
         _run_module $name 'install'
     }

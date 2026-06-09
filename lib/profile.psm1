@@ -32,7 +32,7 @@ function profile_resolve_chain([string]$name) {
     $visited = [System.Collections.Generic.HashSet[string]]::new()
     $chain   = [System.Collections.Generic.List[string]]::new()
     _profile_resolve_recursive $name $visited $chain
-    return ,$chain.ToArray()
+    return $chain.ToArray()
 }
 
 function profile_merge([string[]]$names) {
@@ -63,9 +63,9 @@ function profile_merge([string[]]$names) {
     }
 
     return @{
-        lib     = ,$lib.ToArray()
-        theme   = ,$theme.ToArray()
-        install = ,$install.ToArray()
+        lib     = $lib.ToArray()
+        theme   = $theme.ToArray()
+        install = $install.ToArray()
     }
 }
 
