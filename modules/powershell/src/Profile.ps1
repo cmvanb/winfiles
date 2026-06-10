@@ -20,7 +20,7 @@ Set-ItemProperty -Path HKCU:\Environment -Name 'PYTHONPYCACHEPREFIX' -Value "$en
 Set-ItemProperty -Path HKCU:\Environment -Name 'STARSHIP_CONFIG'  -Value "$env:USERPROFILE\.config\starship\starship.toml"
 Set-ItemProperty -Path HKCU:\Environment -Name 'SSH_AUTH_SOCK'    -Value "\\.\pipe\openssh-ssh-agent"
 Set-ItemProperty -Path HKCU:\Environment -Name 'CC'               -Value "clang-cl"
-Set-ItemProperty -Path HKCU:\Environment -Name 'PATH'             -Value "$env:USERPROFILE\.local\bin;$env:PATH"
+if ($env:PATH -notlike "*$env:USERPROFILE\.local\bin*") { $env:PATH = "$env:USERPROFILE\.local\bin;$env:PATH" }
 
 # XDG directories
 if (-not (Test-Path $env:XDG_CACHE_HOME))   { [void](New-Item -Path $env:XDG_CACHE_HOME   -ItemType Directory) }
