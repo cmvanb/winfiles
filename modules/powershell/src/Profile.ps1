@@ -14,6 +14,7 @@ Set-ItemProperty -Path HKCU:\Environment -Name 'XDG_BIN_HOME'     -Value "$env:U
 Set-ItemProperty -Path HKCU:\Environment -Name 'XDG_CACHE_HOME'   -Value "$env:USERPROFILE\.local\cache"
 Set-ItemProperty -Path HKCU:\Environment -Name 'XDG_CONFIG_HOME'  -Value "$env:USERPROFILE\.config"
 Set-ItemProperty -Path HKCU:\Environment -Name 'XDG_DATA_HOME'    -Value "$env:USERPROFILE\.local\share"
+Set-ItemProperty -Path HKCU:\Environment -Name 'XDG_OPT_HOME'     -Value "$env:USERPROFILE\.local\opt"
 Set-ItemProperty -Path HKCU:\Environment -Name 'XDG_SCRIPTS_HOME' -Value "$env:USERPROFILE\.local\scripts"
 Set-ItemProperty -Path HKCU:\Environment -Name 'PYTHONPYCACHEPREFIX' -Value "$env:USERPROFILE\.local\cache\python"
 Set-ItemProperty -Path HKCU:\Environment -Name 'STARSHIP_CONFIG'  -Value "$env:USERPROFILE\.config\starship\starship.toml"
