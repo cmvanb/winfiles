@@ -124,8 +124,7 @@
 
         /* Editor */
         "editor.background": "${color_hash('editor_bg')}",
-        /* editor_text_normal */
-        "editor.foreground": "${color_hash('secondary_12')}",
+        "editor.foreground": "${color_hash('editor_text')}",
 
         /* Editor cursor */
         "editorCursor.background": "${color_hash('gray_0')}",
@@ -239,7 +238,7 @@
                 "string constant.other.placeholder",
             ],
             "settings": {
-                "foreground": "${color_hash('secondary_12')}"
+                "foreground": "${color_hash('syn_identifier')}"
             }
         },
         {
@@ -285,7 +284,7 @@
             ],
             "settings": {
                 "fontStyle": "bold",
-                "foreground": "${color_hash('secondary_15')}"
+                "foreground": "${color_hash('syn_function')}"
             }
         },
         {
@@ -297,7 +296,7 @@
             ],
             "settings": {
                 "fontStyle": "",
-                "foreground": "${color_hash('secondary_12')}"
+                "foreground": "${color_hash('syn_identifier')}"
             }
         },
         /* Tag (e.g. YAML keys) */
@@ -309,7 +308,7 @@
                 "markup.deleted.git_gutter"
             ],
             "settings": {
-                "foreground": "${color_hash('secondary_12')}"
+                "foreground": "${color_hash('syn_identifier')}"
             }
         },
         {
@@ -318,7 +317,7 @@
                 "meta.block variable.other"
             ],
             "settings": {
-                "foreground": "${color_hash('secondary_9')}"
+                "foreground": "${color_hash('syn_identifier')}"
             }
         },
         {
@@ -400,7 +399,7 @@
             ],
             "settings": {
                 "fontStyle": "bold",
-                "foreground": "${color_hash('secondary_15')}"
+                "foreground": "${color_hash('syn_function')}"
             }
         },
         {
@@ -425,7 +424,7 @@
                 "variable.other.class.js"
             ],
             "settings": {
-                "foreground": "${color_hash('secondary_9')}"
+                "foreground": "${color_hash('syn_identifier')}"
             }
         },
         {
@@ -435,7 +434,7 @@
             ],
             "settings": {
                 "fontStyle": "italic",
-                "foreground": "${color_hash('secondary_9')}"
+                "foreground": "${color_hash('syn_identifier')}"
             }
         },
         {
@@ -444,7 +443,7 @@
                 "entity.name.method.js"
             ],
             "settings": {
-                "foreground": "${color_hash('secondary_12')}"
+                "foreground": "${color_hash('syn_identifier')}"
             }
         },
         {
@@ -454,7 +453,7 @@
                 "variable.function.constructor"
             ],
             "settings": {
-                "foreground": "${color_hash('secondary_15')}"
+                "foreground": "${color_hash('syn_function')}"
             }
         },
         {
@@ -517,7 +516,7 @@
                 "source.json meta.structure.dictionary.json support.type.property-name.json"
             ],
             "settings": {
-                "foreground": "${color_hash('secondary_12')}"
+                "foreground": "${color_hash('syn_identifier')}"
             }
         },
         {
@@ -526,7 +525,7 @@
                 "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
             ],
             "settings": {
-                "foreground": "${color_hash('secondary_12')}"
+                "foreground": "${color_hash('syn_identifier')}"
             }
         },
         {
@@ -535,7 +534,7 @@
                 "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
             ],
             "settings": {
-                "foreground": "${color_hash('secondary_12')}"
+                "foreground": "${color_hash('syn_identifier')}"
             }
         },
         {
@@ -544,7 +543,7 @@
                 "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
             ],
             "settings": {
-                "foreground": "${color_hash('secondary_12')}"
+                "foreground": "${color_hash('syn_identifier')}"
             }
         },
         {
@@ -553,7 +552,7 @@
                 "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
             ],
             "settings": {
-                "foreground": "${color_hash('secondary_12')}"
+                "foreground": "${color_hash('syn_identifier')}"
             }
         },
         {
@@ -562,7 +561,7 @@
                 "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
             ],
             "settings": {
-                "foreground": "${color_hash('secondary_12')}"
+                "foreground": "${color_hash('syn_identifier')}"
             }
         },
         {
@@ -571,7 +570,7 @@
                 "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
             ],
             "settings": {
-                "foreground": "${color_hash('secondary_12')}"
+                "foreground": "${color_hash('syn_identifier')}"
             }
         },
         {
@@ -580,7 +579,7 @@
                 "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
             ],
             "settings": {
-                "foreground": "${color_hash('secondary_12')}"
+                "foreground": "${color_hash('syn_identifier')}"
             }
         },
         {
@@ -589,7 +588,7 @@
                 "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
             ],
             "settings": {
-                "foreground": "${color_hash('secondary_12')}"
+                "foreground": "${color_hash('syn_identifier')}"
             }
         },
         {
@@ -599,7 +598,7 @@
                 "punctuation.definition.list_item.markdown"
             ],
             "settings": {
-                "foreground": "${color_hash('secondary_9')}"
+                "foreground": "${color_hash('syn_identifier')}"
             }
         },
         {
@@ -652,7 +651,7 @@
             ],
             "settings": {
                 "fontStyle": "bold",
-                "foreground": "${color_hash('secondary_10')}"
+                "foreground": "${color_hash('syn_identifier')}"
             }
         },
         {
@@ -797,7 +796,7 @@
                 "entity.other.attribute-name"
             ],
             "settings": {
-                "foreground": "${color_hash('secondary_12')}"
+                "foreground": "${color_hash('syn_identifier')}"
             }
         },
         {
@@ -817,7 +816,7 @@
                 "entity.other.attribute-name.class"
             ],
             "settings": {
-                "foreground": "${color_hash('secondary_15')}"
+                "foreground": "${color_hash('syn_function')}"
             }
         },
         {

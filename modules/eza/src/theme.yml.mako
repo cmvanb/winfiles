@@ -87,7 +87,7 @@ file_type:
   temp: { foreground: "${color_hash("debug")}" }
   compiled: { foreground: "${color_hash("debug")}" }
   build: { foreground: "${color_hash("ansi_bryellow")}" }
-  source: { foreground: "${color_hash("secondary_13")}" }
+  source: { foreground: "${color_hash("syn_function")}" }
 
 punctuation: { foreground: "${color_hash("ansi_white")}" }
 date: { foreground: "${color_hash("text_10")}" }

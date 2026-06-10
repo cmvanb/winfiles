@@ -20,7 +20,7 @@
                     <key>caret</key>
                     <string>${color_hash('text_0')}</string>
                     <key>foreground</key>
-                    <string>${color_hash('secondary_9')}</string>
+                    <string>${color_hash('syn_identifier')}</string>
                     <key>invisibles</key>
                     <string>${color_hash('debug')}</string>
                     <key>lineHighlight</key>
@@ -50,7 +50,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>${color_hash('secondary_9')}</string>
+                    <string>${color_hash('syn_identifier')}</string>
                 </dict>
             </dict>
             <!--
@@ -64,7 +64,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>${color_hash('secondary_9')}</string>
+                    <string>${color_hash('syn_identifier')}</string>
                 </dict>
             </dict>
             <dict>
@@ -78,7 +78,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>${color_hash('secondary_9')}</string>
+                    <string>${color_hash('syn_identifier')}</string>
                 </dict>
             </dict>
             <dict>
@@ -89,7 +89,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>${color_hash('secondary_9')}</string>
+                    <string>${color_hash('syn_identifier')}</string>
                 </dict>
             </dict>
             <dict>
@@ -100,7 +100,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>${color_hash('secondary_9')}</string>
+                    <string>${color_hash('syn_identifier')}</string>
                 </dict>
             </dict>
             <!--
@@ -130,7 +130,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>${color_hash('secondary_12')}</string>
+                    <string>${color_hash('syn_type')}</string>
                 </dict>
             </dict>
             <dict>
@@ -141,7 +141,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>${color_hash('secondary_12')}</string>
+                    <string>${color_hash('syn_type')}</string>
                 </dict>
             </dict>
             <!--
@@ -317,7 +317,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>${color_hash('secondary_15')}</string>
+                    <string>${color_hash('syn_function')}</string>
                     <key>fontStyle</key>
                     <string>bold</string>
                 </dict>
