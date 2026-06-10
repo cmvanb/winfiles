@@ -107,6 +107,7 @@
         },
 
         /* Tab management */
+        /*
         {
             "command": "closeTab",
             "keys": "ctrl+w"
@@ -133,6 +134,7 @@
             },
             "keys": "ctrl+shift+l"
         },
+        */
 
         /* Pane management */
         {
