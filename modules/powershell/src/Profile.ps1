@@ -19,6 +19,7 @@ Set-ItemProperty -Path HKCU:\Environment -Name 'XDG_SCRIPTS_HOME' -Value "$env:U
 Set-ItemProperty -Path HKCU:\Environment -Name 'PYTHONPYCACHEPREFIX' -Value "$env:USERPROFILE\.local\cache\python"
 Set-ItemProperty -Path HKCU:\Environment -Name 'STARSHIP_CONFIG'  -Value "$env:USERPROFILE\.config\starship\starship.toml"
 Set-ItemProperty -Path HKCU:\Environment -Name 'SSH_AUTH_SOCK'    -Value "\\.\pipe\openssh-ssh-agent"
+Set-ItemProperty -Path HKCU:\Environment -Name 'CC'               -Value "clang-cl"
 Set-ItemProperty -Path HKCU:\Environment -Name 'PATH'             -Value "$env:USERPROFILE\.local\bin;$env:PATH"
 
 # XDG directories
