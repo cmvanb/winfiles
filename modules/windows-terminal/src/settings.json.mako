@@ -186,7 +186,9 @@
             "experimental.retroTerminalEffect": false,
             "font":
             {
-                "face": "IosevkaTerm Nerd Font Mono"
+                "face": "Nordwand Mono",
+                "size": 11,
+                "weight": "normal"
             },
             "historySize": 100000,
             "intenseTextStyle": "bold"
