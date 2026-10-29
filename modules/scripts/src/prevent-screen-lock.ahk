@@ -1,15 +1,13 @@
 #Requires AutoHotkey >=2.0
 
-CoordMode "Mouse", "Screen"
+; Keep the session awake without injecting mouse movement: AHK's MouseMove
+; sends absolute coordinates, which raw-input games read as huge deltas.
 Loop
 {
-    ; Move mouse
-    MouseMove 1, 1, 0, "R"
+    ; Only nudge when the user has been physically idle; never during play
+    if (A_TimeIdlePhysical >= 50000)
+        Send "{F15}"
 
-    ; Return mouse to its original position
-    MouseMove -1, -1, 0, "R"
-
-    ; Wait before moving the mouse again
     Sleep 60000
 }
 return
